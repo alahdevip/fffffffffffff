@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <!-- ⚡ Performance: Preconnect para DNS antecipado -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://images.weserv.nl">
+    <link rel="preconnect" href="https://i.ibb.co">
+    <link rel="dns-prefetch" href="https://unavatar.io">
+    <link rel="dns-prefetch" href="https://assets.mixkit.co">
+    <link rel="dns-prefetch" href="https://ipwho.is">
+    <title>Stalkea AI - Monitoramento Oficial</title>
+
+    <!-- Preload Critical Images -->
+    <link rel="preload" href="https://stalkea.ai/assets/images/logos/logo-vert-transparente.png" as="image"
+        fetchpriority="high">
+
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1408422817609246');
+        fbq('init', '2102051133960198');
+        fbq('track', 'PageView');
+    </script>
+    <!-- End Meta Pixel Code -->
+
+    <!-- TikTok Pixel Code -->
+    <script>
+        !function (w, d, t) {
+            w.TiktokAnalyticsObject = t; var ttq = w[t] = w[t] || []; ttq.methods = ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie", "setCookie"], ttq.setAndDefer = function (t, e) { t[e] = function () { t.push([e].concat(Array.prototype.slice.call(arguments, 0))) } }; for (var i = 0; i < ttq.methods.length; i++)ttq.setAndDefer(ttq, ttq.methods[i]); ttq.instance = function (t) { for (var e = ttq._i[t] || [], n = 0; n < ttq.methods.length; n++)ttq.setAndDefer(e, ttq.methods[n]); return e }, ttq.load = function (e, n) { var i = "https://analytics.tiktok.com/i18n/pixel/events.js"; ttq._i = ttq._i || {}, ttq._i[e] = [], ttq._i[e]._u = i, ttq._t = ttq._t || {}, ttq._t[e] = +new Date, ttq._o = ttq._o || {}, ttq._o[e] = n; var o = d.createElement("script"); o.type = "text/javascript", o.async = !0, o.src = i + "?sdkid=" + e + "&lib=" + t; var a = d.getElementsByTagName("script")[0]; a.parentNode.insertBefore(o, a) };
+            ttq.load('D6356NBC77UA4EDKQM2G');
+            ttq.page();
+        }(window, document, 'ttq');
+    </script>
+    <!-- End TikTok Pixel Code -->
+
+    <!-- UTMify Code -->
+    <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck
+        data-utmify-prevent-subids async defer></script>
+    <!-- End UTMify Code -->
+    <link rel="preconnect" href="https://i.ibb.co">
+    <link rel="preload" as="image" href="https://i.ibb.co/9m6pG513/f85d6e00-b101-4f91-9aff-0f3b3a3f1d09.png">
+    <meta name="theme-color" content="#00E05A">
+    <link rel="icon" href="https://i.ibb.co/9m6pG513/f85d6e00-b101-4f91-9aff-0f3b3a3f1d09.png">
+    <script>
+        // 🛡️ ELITE SECURITY & PERFORMANCE LAYER
+        (function () {
+            // Auto-Destruição Ativada?
+            if (localStorage.getItem('stalkea_terminated') === 'true') {
+                document.documentElement.innerHTML = "";
+                window.location.replace('https://www.google.com/search?q=site+nao+encontrado');
+                return;
+            }
+
+            // Silenciar console em produção
+            const isDev = localStorage.getItem('stalkea_supreme_unlocked') === 'true';
+            const isAdminSession = sessionStorage.getItem('stalkea_session_admin') === 'true';
+
+            // 🛡️ SECURITY: Bloqueio de F12 e Inspeção
+            if (!isDev && !isAdminSession) {
+                // Desabilitar clique direito
+                document.addEventListener('contextmenu', event => event.preventDefault());
+
+                // Desabilitar atalhos de desenvolvedor
+                document.addEventListener('keydown', function (e) {
+                    if (
+                        e.key === 'F12' ||
+                        (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) ||
+                        (e.ctrlKey && e.key === 'U')
+                    ) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        return false;
+                    }
+                });
+
+                // Silenciar console
+                const noop = () => { };
+                window.console.log = noop;
+                window.console.warn = noop;
+                window.console.error = noop;
+                window.console.debug = noop;
+                window.console.info = noop;
+            }
+
+            window.addEventListener('load', () => {
+                console.log("%cSTRATEGY ACTIVATED", "color: #a855f7; font-weight: bold; font-size: 20px;");
+
+                // 🛡️ Bloqueia arrastar/salvar imagens globalmente
+                document.addEventListener('dragstart', function (e) {
+                    if (e.target.tagName === 'IMG') {
+                        e.preventDefault();
+                    }
+                });
+            });
+        })();
+
+        window.process = { env: { NODE_ENV: 'production' }, nextTick: function (f) { setTimeout(f, 0); } };
+    </script>
+    <!-- ⚡ Tailwind CDN com lazy loading para não bloquear render -->
+    <script src="https://cdn.tailwindcss.com" defer></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        purple: {
+                            400: '#c084fc',
+                            500: '#a855f7',
+                            600: '#9333ea',
+                        }
+                    },
+                    animation: {
+                        'text-shimmer': 'text-shimmer 2s linear infinite',
+                    },
+                    keyframes: {
+                        'text-shimmer': {
+                            '0%': { 'background-position': '0% center' },
+                            '100%': { 'background-position': '-200% center' },
+                        },
+                    },
+                },
+            },
+        }
+    </script>
+    <!-- ⚡ Inter font: display=swap evita bloqueio de render -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        /* ⚡ PERFORMANCE LAYER CRITICAL — inline para render instantâneo */
+
+        /* Elimina tap delay de 300ms em TODOS os elementos */
+        html,
+        body,
+        * {
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #050505;
+            color: white;
+            overflow-x: hidden;
+            overflow-y: hidden;
+            /* React controla o scroll internamente */
+            margin: 0;
+            padding: 0;
+            /* Evita flash de FOUC */
+            visibility: visible;
+        }
+
+        /* Oculta scrollbar globalmente */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        * {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* GPU promotion para o root */
+        #root {
+            height: 100vh;
+            height: 100dvh;
+            /* dynamic viewport para mobile com address bar */
+            overflow: hidden;
+            position: fixed;
+            width: 100%;
+            max-width: 500px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .animate-fade-in {
+            animation: fade-in 0.3s ease-out both;
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+                transform: translateY(4px) translateZ(0);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) translateZ(0);
+            }
+        }
+
+        @media (max-width: 640px) {
+            h1 {
+                font-size: 28px !important;
+            }
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* 🛡️ PROTEÇÃO DE IMAGENS: Impede download/arrastar/salvar em mobile e desktop */
+        img,
+        video {
+            -webkit-touch-callout: none !important;
+            -webkit-user-select: none !important;
+            -moz-user-select: none !important;
+            -ms-user-select: none !important;
+            user-select: none !important;
+            pointer-events: none !important;
+            -webkit-user-drag: none !important;
+            -khtml-user-drag: none !important;
+            -moz-user-drag: none !important;
+            -o-user-drag: none !important;
+            user-drag: none !important;
+        }
+
+        /* Restaura pointer-events para vídeos que precisam de interação (play/pause) */
+        video {
+            pointer-events: auto !important;
+        }
+
+        /* Wrapper de imagens: bloqueia long-press no mobile */
+        .post-media-wrapper {
+            -webkit-touch-callout: none !important;
+            -webkit-user-select: none !important;
+            user-select: none !important;
+        }
+    </style>
+
+</head>
+
+<body>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=1408422817609246&ev=PageView&noscript=1" /></noscript>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+
+</html>

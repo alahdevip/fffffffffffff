@@ -1,0 +1,13 @@
+node_modules
+.git
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+test-*.js
+*.test.js
+*.spec.js
+README.md
+INICIAR_*.bat
+start.bat
