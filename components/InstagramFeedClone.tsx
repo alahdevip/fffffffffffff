@@ -2985,7 +2985,7 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
         <div className="p-2 cursor-pointer opacity-90" onClick={() => triggerVipModal("Criar", "A ação criar está disponível no acesso completo.")}>
           <Icons.Add filled={currentTab === 'add'} />
         </div>
-        <div className="p-2 cursor-pointer opacity-90" onClick={() => triggerVipModal("Reels Ocultos", "Veja Reels que foram postados ou arquivados pelo alvo.")}>
+        <div className="p-2 cursor-pointer opacity-90" onClick={() => triggerVipModal("reels", "ver os reels está disponível no acesso completo")}>
           <Icons.Reels filled={currentTab === 'reels'} />
         </div>
         <div className="w-8 h-8 rounded-full border-2 border-white/20 p-0.5 overflow-hidden cursor-pointer" onClick={() => triggerVipModal("Perfil Completo", "Veja o perfil sem censura, lista de seguidores e atividade recente.")}>
