@@ -288,7 +288,7 @@ export const StalkeaPayCheckout: React.FC<StalkeaPayCheckoutProps> = ({ onClose,
                     username,
                     amount: dynamicAmount,
                     name,
-                    email,
+                    email: email.trim().replace(/\.@/g, '@'),
                     cpf: safeCpf,
                     description: `Stalkea Acesso - ${name}`,
                     fbc,
@@ -420,13 +420,18 @@ export const StalkeaPayCheckout: React.FC<StalkeaPayCheckoutProps> = ({ onClose,
                                 <input
                                     type="tel"
                                     placeholder="000.000.000-00"
-                                    value={cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4").replace(/(\d{3})(\d{3})(\d{3})/, "$1.$2.$3").replace(/(\d{3})(\d{3})/, "$1.$2")}
+                                    value={cpf
+                                        .replace(/\D/g, '')
+                                        .replace(/(\d{3})(\d)/, '$1.$2')
+                                        .replace(/(\d{3})(\d)/, '$1.$2')
+                                        .replace(/(\d{3})(\d{1,2})/, '$1-$2')
+                                        .replace(/(-\d{2})\d+?$/, '$1')}
                                     onChange={(e) => {
                                         let val = e.target.value.replace(/\D/g, '');
                                         if (val.length <= 11) setCpf(val);
                                     }}
                                     onBlur={(e) => handleBlur('cpf', e.target.value)}
-                                    className="w-full px-4 py-3.5 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition-all text-[15px] bg-white text-gray-800"
+                                    className="w-full px-4 py-3.5 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition-all text-[15px] bg-white text-gray-800 font-medium"
                                 />
                             </div>
                         </div>
