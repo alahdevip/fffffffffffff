@@ -2243,7 +2243,7 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
 
           // Optimized: Read from ref instead of sessionStorage every frame
           if (scrollY > lastScrollTriggerRef.current + triggerThreshold) {
-            triggerVipModal("Aviso", "Desbloqueie o acesso VIP para continuar navegando.");
+            triggerVipModal("Aviso", "Desbloqueie o acesso completo para continuar navegando.");
             lastScrollTriggerRef.current = scrollY;
             sessionStorage.setItem('last_vip_scroll_trigger', scrollY.toString());
           }
