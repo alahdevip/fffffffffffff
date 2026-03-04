@@ -741,71 +741,6 @@ export const Cta: React.FC<CtaProps> = ({ username, profilePic, stats, price, on
                             </svg>
                         </div >
 
-                        {/* Testimonials Card */}
-                        < div style={{
-                            background: '#0D0D0D',
-                            borderRadius: '32px',
-                            padding: '35px 25px',
-                            border: '1px solid rgba(255,255,255,0.05)',
-                            textAlign: 'center',
-                            boxShadow: '0 20px 50px rgba(0,0,0,0.4)',
-                            marginBottom: '30px'
-                        }}>
-                            <h2 style={{ fontSize: '1.6rem', fontWeight: 900, color: 'white', lineHeight: '1.2', marginBottom: '25px' }}>
-                                Veja o que falam as pessoas que usam o <span className="shine-purple-text">Stalkea.ai</span>
-                            </h2>
-
-                            <div
-                                key={testimonialStep}
-                                className="fade-in-up"
-                                onTouchStart={handleTouchStart}
-                                onTouchEnd={handleTouchEnd}
-                                style={{
-                                    background: 'rgba(255,255,255,0.02)',
-                                    borderRadius: '24px',
-                                    padding: '25px',
-                                    textAlign: 'left',
-                                    border: '1px solid rgba(255,255,255,0.03)',
-                                    position: 'relative',
-                                    minHeight: '160px',
-                                    cursor: 'grab',
-                                    userSelect: 'none'
-                                }}
-                            >
-                                <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '15px' }}>
-                                    <div style={{ width: '48px', height: '48px', borderRadius: '50%', overflow: 'hidden', border: '2px solid #6B59D8' }}>
-                                        <img
-                                            src={testimonials[testimonialStep].img}
-                                            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                                            alt="User"
-                                        />
-                                    </div>
-                                    <div>
-                                        <p style={{ color: 'white', fontWeight: 800, fontSize: '1.05rem' }}>{testimonials[testimonialStep].name}</p>
-                                        <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.85rem' }}>{testimonials[testimonialStep].time}</p>
-                                    </div>
-                                </div>
-                                <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.95rem', lineHeight: '1.6' }}>
-                                    {testimonials[testimonialStep].text}
-                                </p>
-                            </div>
-
-                            {/* Pagination Dots */}
-                            <div style={{ display: 'flex', justifyContent: 'center', gap: '8px', marginTop: '20px' }}>
-                                {testimonials.map((_, i) => (
-                                    <div
-                                        key={i}
-                                        style={{
-                                            width: i === testimonialStep ? '30px' : '8px',
-                                            height: '8px',
-                                            background: i === testimonialStep ? '#6B59D8' : 'rgba(255,255,255,0.2)',
-                                            borderRadius: '10px',
-                                            transition: 'all 0.3s ease'
-                                        }}
-                                    ></div>
-                                ))}
-                            </div>
-                        </div >
 
                         {/* Sensitive Information Warning */}
                         < div style={{
@@ -972,6 +907,74 @@ export const Cta: React.FC<CtaProps> = ({ username, profilePic, stats, price, on
                             <p style={{ fontSize: '0.75rem', color: 'rgba(255, 255, 255, 0.45)', lineHeight: '1.3', fontWeight: 500 }}>
                                 Garantimos sua satisfação ou devolvemos 100% do valor.
                             </p>
+                        </div>
+                    </div >
+
+
+                    {/* Testimonials Card */}
+                    <div className="fade-in-up delay-15" style={{
+                        background: '#0D0D0D',
+                        borderRadius: '32px',
+                        padding: '35px 25px',
+                        border: '1px solid rgba(255,255,255,0.05)',
+                        textAlign: 'center',
+                        boxShadow: '0 20px 50px rgba(0,0,0,0.4)',
+                        marginBottom: '40px',
+                        marginTop: '30px'
+                    }}>
+                        <h2 style={{ fontSize: '1.6rem', fontWeight: 900, color: 'white', lineHeight: '1.2', marginBottom: '25px' }}>
+                            Veja o que falam as pessoas que usam o <span className="shine-purple-text">Stalkea.ai</span>
+                        </h2>
+
+                        <div
+                            key={testimonialStep}
+                            className="fade-in-up"
+                            onTouchStart={handleTouchStart}
+                            onTouchEnd={handleTouchEnd}
+                            style={{
+                                background: 'rgba(255,255,255,0.02)',
+                                borderRadius: '24px',
+                                padding: '25px',
+                                textAlign: 'left',
+                                border: '1px solid rgba(255,255,255,0.03)',
+                                position: 'relative',
+                                minHeight: '160px',
+                                cursor: 'grab',
+                                userSelect: 'none'
+                            }}
+                        >
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '15px' }}>
+                                <div style={{ width: '48px', height: '48px', borderRadius: '50%', overflow: 'hidden', border: '2px solid #6B59D8' }}>
+                                    <img
+                                        src={testimonials[testimonialStep].img}
+                                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                                        alt="User"
+                                    />
+                                </div>
+                                <div>
+                                    <p style={{ color: 'white', fontWeight: 800, fontSize: '1.05rem' }}>{testimonials[testimonialStep].name}</p>
+                                    <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.85rem' }}>{testimonials[testimonialStep].time}</p>
+                                </div>
+                            </div>
+                            <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.95rem', lineHeight: '1.6' }}>
+                                {testimonials[testimonialStep].text}
+                            </p>
+                        </div>
+
+                        {/* Pagination Dots */}
+                        <div style={{ display: 'flex', justifyContent: 'center', gap: '8px', marginTop: '20px' }}>
+                            {testimonials.map((_, i) => (
+                                <div
+                                    key={i}
+                                    style={{
+                                        width: i === testimonialStep ? '30px' : '8px',
+                                        height: '8px',
+                                        background: i === testimonialStep ? '#6B59D8' : 'rgba(255,255,255,0.2)',
+                                        borderRadius: '10px',
+                                        transition: 'all 0.3s ease'
+                                    }}
+                                ></div>
+                            ))}
                         </div>
                     </div >
 
