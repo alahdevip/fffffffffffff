@@ -1779,11 +1779,9 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
         { action: 'começou a seguir você.', daysAgo: 1, showFollow: true, isFollowing: true, customTime: '9 h' },
         { action: 'começou a seguir você.', daysAgo: 1, showFollow: true, isFollowing: true, customTime: '12 h' },
         { action: ' e 1 outra pessoa estão no Threads, um app do Instagram. Veja o que essas pessoas estão dizendo.', daysAgo: 1, type: 'threads', customTime: '16 h', hasExtra: true, userOverride: 'maahfgw_', extraOverride: 'kitty_nuv' },
-        { action: 'Nova sugestão para seguir:', detail: '_bru*******', daysAgo: 2, showFollow: true, hasLock: true, customTime: '1 d' },
         { action: 'e outras 3 pessoas curtiram seu comentário: Pegava muito', daysAgo: 2, hasImage: true, hasExtra: true, customTime: '1 d' },
         { action: 'começou a seguir você.', daysAgo: 3, showFollow: true, isFollowing: true, customTime: '2 d' },
         { action: 'adicionou 2 novos stories.', daysAgo: 4, hasImage: true, customTime: '3 d' },
-        { action: 'Nova sugestão para seguir:', detail: 'Lua*******', daysAgo: 6, showFollow: true, hasLock: true, customTime: '5 d' },
         { action: 'começou a seguir você.', daysAgo: 6, showFollow: true, isFollowing: false, customTime: '6 d' },
         { action: 'começou a seguir você.', daysAgo: 7, showFollow: true, isFollowing: true, customTime: '6 d' },
       ];
