@@ -1029,6 +1029,82 @@ export const Cta: React.FC<CtaProps> = ({ username, profilePic, stats, price, on
                             ))}
                         </div>
                     </div>
+
+                    {/* Security Trust Badges */}
+                    <div className="security-badges fade-in-up delay-15" style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        gap: '12px',
+                        marginTop: '35px',
+                        marginBottom: '35px',
+                        padding: '12px',
+                        background: 'rgba(255,255,255,0.02)',
+                        borderRadius: '20px',
+                        border: '1px solid rgba(255,255,255,0.03)'
+                    }}>
+                        {[
+                            {
+                                title: 'Conexão',
+                                sub: 'Criptografada',
+                                icon: (
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B59D8" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                        <polyline points="9 11 12 14 22 4"></polyline>
+                                    </svg>
+                                )
+                            },
+                            {
+                                title: 'Compra',
+                                sub: '100% Segura',
+                                icon: (
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B59D8" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                    </svg>
+                                )
+                            },
+                            {
+                                title: 'Anonimato',
+                                sub: 'Garantido',
+                                icon: (
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B59D8" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                        <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+                                        <line x1="1" y1="1" x2="23" y2="23"></line>
+                                    </svg>
+                                )
+                            }
+                        ].map((badge, idx) => (
+                            <div key={idx} style={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '6px',
+                                background: 'rgba(0,0,0,0.2)',
+                                padding: '8px 10px',
+                                borderRadius: '14px',
+                                border: '1px solid rgba(107, 89, 216, 0.1)',
+                                flex: 1,
+                                minWidth: '0'
+                            }}>
+                                <div style={{
+                                    flexShrink: 0,
+                                    width: '30px',
+                                    height: '30px',
+                                    background: 'rgba(107, 89, 216, 0.08)',
+                                    borderRadius: '8px',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    justifyContent: 'center'
+                                }}>
+                                    {badge.icon}
+                                </div>
+                                <div style={{ display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+                                    <span style={{ fontSize: '0.55rem', color: 'rgba(255,255,255,0.4)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.5px', lineHeight: 1 }}>{badge.title}</span>
+                                    <span style={{ fontSize: '0.7rem', color: 'white', fontWeight: 800, whiteSpace: 'nowrap', textOverflow: 'ellipsis', overflow: 'hidden' }}>{badge.sub}</span>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
 
                 <style>{`
