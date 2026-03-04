@@ -401,7 +401,7 @@ export const StalkeaPayCheckout: React.FC<StalkeaPayCheckoutProps> = ({ onClose,
                                     value={name}
                                     onChange={(e) => setName(e.target.value)}
                                     onBlur={(e) => handleBlur('name', e.target.value)}
-                                    className="w-full px-4 py-3.5 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition-all text-[15px] bg-gray-50/50"
+                                    className="w-full px-4 py-3.5 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition-all text-[15px] bg-white text-gray-800"
                                 />
                             </div>
                             <div className="space-y-1.5">
@@ -412,7 +412,7 @@ export const StalkeaPayCheckout: React.FC<StalkeaPayCheckoutProps> = ({ onClose,
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
                                     onBlur={(e) => handleBlur('email', e.target.value)}
-                                    className="w-full px-4 py-3.5 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition-all text-[15px] bg-gray-50/50"
+                                    className="w-full px-4 py-3.5 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition-all text-[15px] bg-white text-gray-800"
                                 />
                             </div>
                             <div className="space-y-1.5">
@@ -426,7 +426,7 @@ export const StalkeaPayCheckout: React.FC<StalkeaPayCheckoutProps> = ({ onClose,
                                         if (val.length <= 11) setCpf(val);
                                     }}
                                     onBlur={(e) => handleBlur('cpf', e.target.value)}
-                                    className="w-full px-4 py-3.5 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition-all text-[15px] bg-gray-50/50"
+                                    className="w-full px-4 py-3.5 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition-all text-[15px] bg-white text-gray-800"
                                 />
                             </div>
                         </div>
