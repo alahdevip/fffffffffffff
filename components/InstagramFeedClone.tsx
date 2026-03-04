@@ -2025,9 +2025,9 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
                           ) : (
                             <button
                               className="bg-[#0095f6] text-white text-[13px] font-semibold px-4 py-1.5 rounded-lg shrink-0"
-                              onClick={(e) => { e.stopPropagation(); triggerVipModal("Seguir de Volta", "Siga de volta de forma anÃ´nima com o acesso completo."); }}
+                              onClick={(e) => { e.stopPropagation(); triggerVipModal("Seguir", "Siga de forma anônima com o acesso completo."); }}
                             >
-                              Seguir de volta
+                              Seguir
                             </button>
                           )
                         ) : notif.hasImage ? (
