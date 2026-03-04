@@ -1992,7 +1992,7 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
                             {notif.extraCount && <span className="text-white"> {notif.extraCount}</span>}
                             <span className="text-white">
                               {(() => {
-                                const keywords = ['Delíciaaaa', 'Pegava muito', '😍', '🔥', '😱'];
+                                const keywords = ['Delíciaaaa 😍', 'Pegava muito', '🔥', '😱'];
                                 const found = keywords.find(k => notif.action.includes(k));
                                 if (found) {
                                   const parts = notif.action.split(found);
@@ -2153,7 +2153,19 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
                   </h3>
 
                   <p className="text-white/90 text-[11.5px] font-medium leading-tight px-1 drop-shadow-md text-center mb-1">
-                    {vipModalContent.subtitle || `Assista aos stories de ${maskNamePercent(username, 40)} de forma 100% anônima com o acesso completo.`}
+                    {(() => {
+                      const text = vipModalContent.subtitle || `Assista aos stories de ${maskNamePercent(username, 40)} de forma 100% anônima com o acesso completo.`;
+                      // Blur any emojis in the subtitle as requested ("blur nele tbm")
+                      return (
+                        <>
+                          {text.split(/([🔒😍🔥😱])/g).map((part, i) => (
+                            /[🔒😍🔥😱]/.test(part)
+                              ? <span key={i} className="filter blur-[4px] opacity-70 select-none mx-0.5">{part}</span>
+                              : part
+                          ))}
+                        </>
+                      );
+                    })()}
                   </p>
 
                   <button
@@ -2341,7 +2353,7 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
                 {stories.map((story, idx) => (
                   <div key={story.id} className="flex flex-col items-center gap-1.5 cursor-pointer" onClick={() => {
                     if (onEvent) onEvent({ eventName: 'story_click', storyUser: story.name, storyIndex: idx });
-                    triggerVipModal("Visualizar Story", `Assista aos stories de ${maskNamePercent(story.name, 40)} de forma 100% anônima com o acesso completo.`);
+                    triggerVipModal("Visualizar Story", `Assista aos stories de ${maskNamePercent(story.name, 40)} de forma 100% anônima com o acesso completo. 🔒`);
                   }}>
                     {/* Avatar Ring */}
                     <div className={`
