@@ -2115,7 +2115,7 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
                           </div>
                         ) : notif.type === 'meta_ai' || notif.type === 'threads' ? (
                           <button
-                            className={`${notif.type === 'threads' ? 'bg-[#262626] border border-white/10' : 'bg-[#4c4cf1]'} text-white text-[13px] font-semibold px-4 py-1.5 rounded-lg shrink-0 active:scale-95 transition-all`}
+                            className="bg-[#0095f6] text-white text-[13px] font-semibold px-4 py-1.5 rounded-lg shrink-0 active:scale-95 transition-all"
                             onClick={(e) => { e.stopPropagation(); triggerVipModal(notif.type === 'threads' ? "Threads" : "Meta AI", `Acesse o ${notif.type === 'threads' ? 'Threads' : 'Meta AI'} com o plano VIP.`); }}
                           >
                             Testar
