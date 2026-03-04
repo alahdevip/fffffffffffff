@@ -1808,30 +1808,32 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
       // Determine if "Following" (Seguindo) instead of "Follow Back"
       let isFollowing = template.isFollowing || false;
 
-      // Completely mask the name with asterisks as requested, but with variable length for realism
-      const getMask = () => '*'.repeat(Math.floor(Math.random() * 9) + 6); // 6 to 14 asterisks
+      // Pool of realistic fake Brazilian Instagram usernames
+      const FAKE_NOTIF_USERS = [
+        'juliosilvva', 'camilaalves_', 'brunoferraz99', 'larissamoura', 'thiago._.ramos',
+        'fernandacosta_', 'rafaelribeiro__', 'biancafontes', 'pedrolucas.br', 'mariazinha_oficial',
+        'nathsouza_', 'guilherme.lopes', 'isadoravieira', 'matheus_oliveira_', 'luana.f',
+        'vicentecardoso', 'gabrielagomes__', 'lucasbatista_', 'paulinhaofc', 'alinepereiraa'
+      ];
 
-      let fullyMaskedName;
+      const FAKE_EXTRA_USERS = [
+        'karenalves', 'rodrigopaz_', 'tainaramedeiros', 'felipecavalcanti', 'jess.santos',
+        'vitorhugo.br', 'deborahteixeira', 'erickmelo_', 'priscilalima__', 'andersooon'
+      ];
 
-      // Use the specific censored list if available for this index
-      if (i < extraCensoredUsers.length) {
-        fullyMaskedName = extraCensoredUsers[i];
-      } else {
-        fullyMaskedName = getMask();
-      }
-
-      const extraMaskedName = getMask();
+      const fakeName = FAKE_NOTIF_USERS[(i + Math.floor(Math.random() * 3)) % FAKE_NOTIF_USERS.length];
+      const fakeExtra = FAKE_EXTRA_USERS[(i + 2) % FAKE_EXTRA_USERS.length];
 
       return {
         ...template,
         isFollowing,
         time: template.customTime || formatRelativeTime(adjustedDaysAgo),
         rawDaysAgo: adjustedDaysAgo,
-        user: fullyMaskedName,
+        user: fakeName,
         fullUser: storyUser.name,
         storyImg: storyUser.img,
         extraImg: template.hasExtra ? nextStory.img : undefined,
-        extra: template.hasExtra ? extraMaskedName : undefined,
+        extra: template.hasExtra ? fakeExtra : undefined,
         fullExtra: template.hasExtra ? nextStory.name : undefined
       };
     });
