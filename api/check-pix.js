@@ -6,11 +6,11 @@ export default async function handler(req, res) {
         return res.status(400).json({ success: false, error: 'Payment ID is required' });
     }
 
-    // SIGILOPAY - Primary gateway
-    const PUBLIC_KEY = process.env.SIGILOPAY_PUBLIC_KEY;
-    const SECRET_KEY = process.env.SIGILOPAY_SECRET_KEY;
+    // SLIMPAY - Primary gateway
+    const PUBLIC_KEY = process.env.SLIMPAY_PUBLIC_KEY;
+    const SECRET_KEY = process.env.SLIMPAY_SECRET_KEY;
 
-    const BASE_URL = 'https://app.sigilopay.com.br/api/v1/gateway';
+    const BASE_URL = 'https://app.slimmpayy.com.br/api/v1/gateway';
 
     if (PUBLIC_KEY && SECRET_KEY) {
         try {

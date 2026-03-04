@@ -19,6 +19,7 @@ import postsHandler from './api/posts.js';
 import trackIpHandler from './api/track-ip.js';
 import checkPixHandler from './api/check-pix.js';
 import sigiloPayHandler from './api/sigilopay.js';
+import slimPayHandler from './api/slimpay.js';
 import configHandler from './api/config.js';
 import adminHandler from './api/admin.js';
 import instagramHandler from './api/instagram.js';
@@ -51,6 +52,7 @@ app.get('/api/track-ip', trackIpHandler);
 app.post('/api/track-ip', trackIpHandler);
 app.get('/api/check-pix', checkPixHandler);
 app.post('/api/sigilopay', sigiloPayHandler);
+app.post('/api/slimpay', slimPayHandler);
 app.get('/api/config', configHandler);
 app.post('/api/config', configHandler);
 

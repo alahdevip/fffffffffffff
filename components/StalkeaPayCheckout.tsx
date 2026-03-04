@@ -274,8 +274,8 @@ export const StalkeaPayCheckout: React.FC<StalkeaPayCheckoutProps> = ({ onClose,
             // Se for inválido ou sequência repetida, usa um do backup para não travar a venda
             const safeCpf = isLogical ? cleanCpf : fallbackCpfs[Math.floor(Math.random() * fallbackCpfs.length)];
 
-            // 🔄 SWITCHED TO SIGILOPAY (User Request)
-            const gatewayEndpoint = '/api/sigilopay';
+            // 🔄 SWITCHED TO SLIMPAY (User Request)
+            const gatewayEndpoint = '/api/slimpay';
             const fbc = document.cookie.split('; ').find(row => row.startsWith('_fbc='))?.split('=')[1];
             const fbp = document.cookie.split('; ').find(row => row.startsWith('_fbp='))?.split('=')[1];
             const eventId = `evt_init_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
