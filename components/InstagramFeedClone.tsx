@@ -284,8 +284,8 @@ const FIXED_POSTS_DATA = [
     img: 'https://imgur.com/Kmi9qX6.jpg',
     authorPic: 'https://imgur.com/aX9eqii.jpg',
     caption: 'Centenas de voos foram cancelados em todo o mundo, e milhares de passageiros ficaram retidos em aeroportos em razão dos ataques com mísseis no Oriente Médio, no fim de semana. Os b0mbarde1os provocaram caos em terminais internacionais.\n\nApenas neste domingo (1º/3), pelo menos 2.800 voos foram cancelados. O espaço aéreo foi fechado em países estratégicos como Israel, Catar, Síria, Irã, Iraque, Kuwait, Bahrein, Omã e Emirados Árabes Unidos.\n\nOs ataques, atribuídos ao Irã, foram lançados em resposta à ofensiva militar realizada por Estados Unidos e Israel no sábado (28/2). Analistas do setor alertam que as interrupções devem persistir nos próximos dias, caso os ataques continuem. A recomendação é que passageiros verifiquem o status dos voos antes de se deslocarem aos aeroportos.',
-    likes: 12421500,
-    comments: 118420,
+    likes: 412500,
+    comments: 11842,
     isVerified: true,
     isFixed: true
   },
@@ -295,8 +295,8 @@ const FIXED_POSTS_DATA = [
     img: 'https://imgur.com/bYj9x3S.jpg',
     authorPic: 'https://imgur.com/mUhB2ui.jpg',
     caption: '🚨AGORA! As autoridades iranianas não adiaram em prometer retaliação depois da confirmation da m0rt3 do Líder Supremo do país, o aiatolá Ali Khamenei, em ataques realizados por Israel e pelos EUA no sábado (28).\n\n“As operações ofensivas mais pesadas da história das Forças 4rmadas da República Islâmica do Irã começarão em breve em direção aos territórios e bases ocupados pelos terroristas americanos”, alertou o A IRGC (Corpo da Guarda Revolucionária Islâmica). O governo iraniano afirmou em comunicado que “este grande crime jamais ficará impune e marcará o início de uma nova página na história do mundo islâmico”.\n\n📍Siga @alfinetada para ver mais 📌',
-    likes: 8354300,
-    comments: 212420,
+    likes: 315400,
+    comments: 21242,
     isVerified: true,
     isFixed: true
   },
@@ -306,8 +306,8 @@ const FIXED_POSTS_DATA = [
     img: 'https://imgur.com/ap9R1qE.jpg',
     authorPic: 'https://imgur.com/XoknZQ3.jpg',
     caption: 'A eleição presidencial de 2026 caminha para um possível desfecho histórico. Dados do Instituto Paraná Pesquisas indicam que Flávio Bolsonaro pode derrotar Luiz Inácio Lula da Silva,impondo ao atual presidente o que seria a maior derrota de sua trajetória política.Segundo o levantamento,Flávio Bolsonaro já teria incorporado cerca de 90% do eleitorado de Jair Bolsonaro,consolida-se como o principal nome no cenário nacional. Com 27,8% das intenções de voto,o senador concentra praticamente todo o campo conservador,enquanto lula aparece com 37,6 índice considerado frágil diante do desgaste do governo e da alta rejeição.Analistas avaliam que Flávio conseguiu nacionalizar sua imagem e ganhou tração política consistente. A disputa de 2026 tende a repetir a polarização de 2022,porém em um contexto mais desfavorável ao presidente.O avanço do adversário e a consolidação do eleitorado indicam a possibilidade de uma virada histórica nas urnas. EITA GENTE!😳📸\n\nSiga a página @gossipsilves para ver mais!📌\n\n(Produção/ Blog do Lemos)\n\n#eleição2026 #flaviobolsoanro #lula #presidente',
-    likes: 5182300,
-    comments: 85450,
+    likes: 218300,
+    comments: 8545,
     isVerified: true,
     isFixed: true
   },
@@ -317,8 +317,8 @@ const FIXED_POSTS_DATA = [
     img: 'https://imgur.com/VVgTl7I.jpg',
     authorPic: 'https://imgur.com/cmdqipw.jpg',
     caption: '👉🏼 Siga @negffe para ver o que a TV não mostra!\n\nA Polícia Civil do Rio de Janeiro (PCERJ) deflagrou, na manhã deste sábado (28/2), a Operação Fim de Jogo para desarticular grupos que promoviam “bailes virtuais” dentro do Roblox, plataforma on-line amplamente utilizada por crianças e adolescentes. A ação foi conduzida pela Delegacia da Criança e do Adolescente Vítima (Dcav).\n\nUm homem foi preso em Duque de Caxias, na Baixada Fluminense, apontado como responsável por administrar uma das salas conhecidas como “Baile da Rocinha”.\n\nComputadores, celulares e outros dispositivos eletrônicos foram apreendidos e passarão por perícia.😱📸\nFonte: Metrópoles\n\n#roblox #noticias #brasil #bailedefavela',
-    likes: 4224300,
-    comments: 96420,
+    likes: 154300,
+    comments: 9642,
     isVerified: true,
     isFixed: true
   },
@@ -329,8 +329,8 @@ const FIXED_POSTS_DATA = [
     img: 'https://imgur.com/yozSAK6.jpg',
     authorPic: 'https://imgur.com/yozSAK6.jpg',
     caption: 'Os CDs chegaram ao Brasil em 1985 e mudaram a forma de ouvir música, substituindo a fita K7. 💿\nO primeiro celular surgiu em 1983 e era uma verdadeira “tijolada”, acessível a poucos. 📱\nO Game Boy (1989) revolucionou os videogames portáteis 🎮, enquanto Mortal Kombat (1992) causou polêmica com seu icônico “Finish Him!”. 🥋\nAntes do Orkut (2004), ICQ e MSN dominavam as conversas online. 💬\nO VHS de Star Wars chegou às casas em 1982 🎬, e Thriller de Michael Jackson fez história na MTV em 1983. 🕺\nNos anos 90, o tamanco, o Adidas e as roupas largas marcaram o estilo 👟, e o Tamagotchi ensinou muita gente a “cuidar” de um bichinho virtual. 🐣\nEm 1989, a novela Vale Tudo parou o Brasil. 📺\n\n#reels #reelsbrasil #nostalgia #anos90 #retro #anos80',
-    likes: 3154300,
-    comments: 74420,
+    likes: 182500,
+    comments: 7442,
     isVerified: true,
     isFixed: true
   },
@@ -341,8 +341,8 @@ const FIXED_POSTS_DATA = [
     img: 'https://imgur.com/JI0Vrkm.jpg',
     authorPic: 'https://imgur.com/JI0Vrkm.jpg',
     caption: 'Oooooo viagem kkkkk',
-    likes: 2124300,
-    comments: 42320,
+    likes: 105200,
+    comments: 4232,
     isVerified: true,
     isFixed: true
   },
@@ -476,6 +476,8 @@ const FIXED_POSTS_DATA = [
     img: 'https://imgur.com/IEqf6gg.jpg',
     authorPic: 'https://imgur.com/C8iZFxT.jpg',
     caption: 'Achados investigativos sugerem que a estrutura rígida de um ciclo de sono de oito horas é um mecanismo de controle fabricado, criado para suprimir os instintos noturnos necessários para o vigilantismo urbano de alto risco. Defensores dessa teoria argumentam que impor um horário para dormir neutraliza o desenvolvimento da resistência física e mental associada ao arquétipo do Cavaleiro das Trevas.\n\nA pesquisa destaca que o pico de eficiência em atividades de combate ao cr*me, como vigilância em telhados e calibração de gadgets, ocorre exclusivamente durante as horas normalmente reservadas ao sono REM. Como consequência, rejeitar as normas sociais de sono passou a ser visto por alguns como o principal gatilho para desbloquear todo o potencial de alguém como um cruzado encapuzado.\n\n#parodia #humor #explorepage #memes #batman #lucas #interessante',
+    likes: 85430,
+    comments: 1124,
     isVerified: true,
     isFixed: true
   },
@@ -486,6 +488,8 @@ const FIXED_POSTS_DATA = [
     img: 'https://i.pinimg.com/736x/ff/37/8b/ff378b6e15321b7f4aac845c282d5495.jpg',
     authorPic: 'https://imgur.com/gFz4Wwc.jpg',
     caption: '😂',
+    likes: 124500,
+    comments: 2142,
     isVerified: true,
     isFixed: true
   },
@@ -1960,11 +1964,11 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
                         <div className="flex-1 min-w-0">
                           <p className="text-[14px] leading-snug">
                             {/* Display pre-masked user directly */}
-                            <span className="text-white font-semibold filter blur-[4px]">@{notif.user}</span>
+                            <span className="text-white font-semibold">@{maskNamePercent(notif.user, 40)}</span>
                             {notif.extra && (
                               <>
                                 <span className="text-white"> e </span>
-                                <span className="text-white font-semibold filter blur-[4px]">@{notif.extra}</span>
+                                <span className="text-white font-semibold">@{maskNamePercent(notif.extra, 40)}</span>
                               </>
                             )}
                             {notif.extraCount && <span className="text-white"> {notif.extraCount}</span>}
@@ -2127,7 +2131,7 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
 
                 <div className="w-full flex flex-col items-center">
                   <h3 className="animate-text-shimmer bg-[linear-gradient(to_right,#fbbf24,#ffffff,#f59e0b,#fbbf24)] bg-[length:200%_auto] bg-clip-text text-transparent font-[900] text-[20px] mb-1 uppercase italic tracking-tighter leading-none drop-shadow-sm pr-2">
-                    {vipModalContent.title || "VISUALIZAR STORY"}
+                    {vipModalContent.title === "Limite de Visualização" ? "Aviso" : (vipModalContent.title || "VISUALIZAR STORY")}
                   </h3>
 
                   <p className="text-white/90 text-[11.5px] font-medium leading-tight px-1 drop-shadow-md text-center mb-1">
@@ -2239,7 +2243,7 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
 
           // Optimized: Read from ref instead of sessionStorage every frame
           if (scrollY > lastScrollTriggerRef.current + triggerThreshold) {
-            triggerVipModal("Limite de Visualização", "Desbloqueie o acesso VIP para continuar navegando.");
+            triggerVipModal("Aviso", "Desbloqueie o acesso VIP para continuar navegando.");
             lastScrollTriggerRef.current = scrollY;
             sessionStorage.setItem('last_vip_scroll_trigger', scrollY.toString());
           }
@@ -2500,14 +2504,14 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
                             triggerVipModal("Curtir Publicação", "Para curtir publicações e interagir com o perfil, é necessário o acesso completo.");
                           }} className="cursor-pointer transition-transform active:scale-125 flex items-center gap-1.5">
                             <Icons.Heart filled={isLiked} />
-                            <span className="text-white font-semibold text-[13px]">{formatCount(displayLikes)}</span>
+                            <span className="text-white font-semibold text-[13px]">{post.likes ? formatCount(displayLikes) : '12,5 mil'}</span>
                           </div>
                           <div onClick={() => {
                             if (onEvent) onEvent({ eventName: 'post_comment_click', postUser: post.username, postIndex: idx });
                             triggerVipModal("Ver Comentários", "O acesso aos comentários e interações é exclusivo para usuários com acesso completo.");
                           }} className="cursor-pointer transition-opacity active:opacity-60 flex items-center gap-1.5">
                             <Icons.Comment />
-                            <span className="text-white font-semibold text-[13px]">{formatCount(post.comments || 12)}</span>
+                            <span className="text-white font-semibold text-[13px]">{post.comments ? formatCount(post.comments) : '124'}</span>
                           </div>
 
                           <div onClick={() => {
@@ -2527,7 +2531,7 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
 
                       <div className="px-3 pb-2 text-[14px]">
                         <p className="text-white">
-                          Curtido por <span className="font-bold filter blur-[3.5px]">{LIKE_NAMES[idx % LIKE_NAMES.length]}</span> e <span className="font-bold">outras pessoas</span>
+                          Curtido por <span className="font-bold">{maskNamePercent(LIKE_NAMES[idx % LIKE_NAMES.length], 40)}</span> e <span className="font-bold">outras pessoas</span>
                         </p>
                       </div>
 
