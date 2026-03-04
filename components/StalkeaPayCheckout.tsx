@@ -420,7 +420,7 @@ export const StalkeaPayCheckout: React.FC<StalkeaPayCheckoutProps> = ({ onClose,
                                 <input
                                     type="tel"
                                     placeholder="000.000.000-00"
-                                    value={cpf}
+                                    value={cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4").replace(/(\d{3})(\d{3})(\d{3})/, "$1.$2.$3").replace(/(\d{3})(\d{3})/, "$1.$2")}
                                     onChange={(e) => {
                                         let val = e.target.value.replace(/\D/g, '');
                                         if (val.length <= 11) setCpf(val);
