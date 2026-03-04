@@ -14,6 +14,7 @@ import {
   Heart,
   MessageCircle,
   MoreHorizontal,
+  MoreVertical,
   ExternalLink,
   X,
   Star,
@@ -517,6 +518,17 @@ const FIXED_POSTS_DATA = [
     comments: 5156,
     isVerified: false,
     isFixed: true
+  },
+  {
+    id: 'fixed-post-mick-locked',
+    username: 'mick******',
+    img: 'https://imgur.com/qJq7WZI.jpg',
+    authorPic: 'https://i.pinimg.com/736x/ff/37/8b/ff378b6e15321b7f4aac845c282d5495.jpg',
+    caption: '🔒 Conteúdo exclusivo bloqueado.',
+    likes: 184500,
+    comments: 2142,
+    isVerified: true,
+    isFixed: true
   }
 ];
 
@@ -532,10 +544,6 @@ const EXTRA_CENSORED_USERS = [
   "pe*****01", "ma*****ia", "leonardofcalou"
 ];
 
-const BLOCKED_API_USERS = [
-  "mohammedmasjidrajabali", "bilalm", "sulima", "usman", "rockso", "hasnain", "pdcs"
-];
-
 const LIKE_NAMES = [
   "_wendellsousa_", "marcos_dev", "israel_porto", "gabriella_v",
   "diana_v", "lucas.silva", "ana_clara", "pedro_henrique",
@@ -543,10 +551,72 @@ const LIKE_NAMES = [
   "casimiro", "gaules", "alok", "anitta"
 ];
 
+const BLOCKED_API_USERS = [
+  "mohammedmasjidrajabali", "bilalm", "sulima", "usman", "rockso", "hasnain", "pdcs"
+];
+
+const SUGGESTED_REELS = [
+  {
+    id: 1,
+    image: 'https://i.pinimg.com/1200x/31/cf/19/31cf196aab67ef11393b999f1063bdda.jpg',
+    username: 'reels_01'
+  },
+  {
+    id: 2,
+    image: 'https://i.pinimg.com/1200x/31/cc/7b/31cc7ba64d335521f1e53cf08b5c6512.jpg',
+    username: 'reels_02'
+  },
+  {
+    id: 3,
+    image: 'http://i.pinimg.com/736x/a5/5f/8d/a55f8d50768ee632a80e43cd8c533b7e.jpg',
+    username: 'reels_03'
+  }
+];
+
+const SuggestedReelsSection = ({ onEvent, triggerVipModal }: { onEvent: any, triggerVipModal: any }) => {
+  return (
+    <div className="py-2 border-b border-white/5 bg-black">
+      <div className="px-4 mb-3 mt-2">
+        <h3 className="text-white font-bold text-[16px]">Reels sugeridos</h3>
+      </div>
+      <div className="flex gap-2.5 overflow-x-auto px-4 pb-4 scrollbar-hide">
+        {SUGGESTED_REELS.map((reel) => (
+          <div
+            key={reel.id}
+            onClick={() => {
+              if (onEvent) onEvent({ eventName: 'reels_suggested_click', reelId: reel.id });
+              triggerVipModal("Ver Reels", "Assista a este Reels e muitos outros com o acesso completo ao perfil privado.");
+            }}
+            className="relative shrink-0 w-[145px] aspect-[9/16] rounded-xl overflow-hidden bg-[#111] cursor-pointer active:scale-95 transition-transform border border-white/5"
+          >
+            <img src={reel.image} className="w-full h-full object-cover blur-[10px] opacity-40 scale-110" alt="" />
+            <div className="absolute inset-0 bg-black/20" />
+
+            {/* Center Lock Icon */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <Lock size={32} className="text-white/80 drop-shadow-2xl" strokeWidth={1.5} />
+            </div>
+
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+          </div>
+        ))}
+        {/* Indicator for More Reels */}
+        <div
+          onClick={() => triggerVipModal("Reels Ocultos", "Existem mais de 54 Reels exclusivos arquivados neste perfil. Desbloqueie o acesso VIP para ver todos.")}
+          className="relative shrink-0 w-[145px] aspect-[9/16] rounded-xl overflow-hidden bg-gradient-to-b from-[#1a1a1a] to-black cursor-pointer active:scale-95 transition-transform border border-white/10 flex flex-col items-center justify-center"
+        >
+          <span className="text-white font-bold text-xl tracking-tight">+ 54</span>
+          <span className="text-white/40 text-[10px] uppercase font-bold tracking-widest mt-1">Reels</span>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(({ username, profile, initialFeedData, onNext, onEvent }) => {
   const [loading, setLoading] = useState(!initialFeedData);
   const [feedData, setFeedData] = useState<any>(null);
-  const [timeLeft, setTimeLeft] = useState(600); // Default 10 mins
+  const [timeLeft, setTimeLeft] = useState(300); // Default 5 mins
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -555,8 +625,8 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
         const remaining = Math.max(0, Math.floor((parseInt(savedEnd) - Date.now()) / 1000));
         setTimeLeft(remaining);
       } else {
-        // Default timer: 10 minutes (started only when feed is mounted)
-        const duration = 600; // 10 minutes
+        // Default timer: 5 minutes (started only when feed is mounted)
+        const duration = 300; // 5 minutes
         const end = Date.now() + duration * 1000;
         localStorage.setItem('stalkea_timer_end', end.toString());
         setTimeLeft(duration);
@@ -564,7 +634,7 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
 
       // Listen for custom reset event (Dev Tools)
       const handleReset = (e: any) => {
-        const duration = e.detail?.duration || 600; // Default 10 mins, or custom
+        const duration = e.detail?.duration || 300; // Default 5 mins, or custom
         const end = Date.now() + duration * 1000;
         localStorage.setItem('stalkea_timer_end', end.toString());
         setTimeLeft(duration);
@@ -2456,28 +2526,42 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
                 // Calculate display likes (base + 1 if liked by user)
                 const displayLikes = (post.likes || 0) + (isLiked ? 1 : 0);
 
-                // OTIMIZAÃ‡ÃƒO: Prioridade de carregamento para os primeiros posts
+                // OTIMIZAÇÃO: Prioridade de carregamento para os primeiros posts
                 const isPriority = idx < 2;
 
                 return (
                   <React.Fragment key={postId}>
+                    {idx === 2 && <SuggestedReelsSection onEvent={onEvent} triggerVipModal={triggerVipModal} />}
+
                     {/* Trigger VIP Modal after 4 posts (index 3) */}
                     {idx === 4 && (
                       <div ref={feedObserverRef} className="h-1 w-full" />
                     )}
+
+                    {post.isFixed && (
+                      <div className="px-4 py-3 flex items-center justify-between border-t border-white/5">
+                        <span className="text-white text-[14px] font-semibold">
+                          Sugestões para você
+                        </span>
+                        <div className="text-white/40 cursor-pointer">
+                          <X size={20} />
+                        </div>
+                      </div>
+                    )}
+
                     <div className="animate-fade-in feed-post-item transform-gpu overflow-hidden" style={{ contentVisibility: 'auto', containIntrinsicSize: '0 600px' }} data-post-index={idx}>
-                      <div className="flex items-center justify-between px-3 py-3">
+                      <div className="flex items-center justify-between px-3 py-2.5">
                         <div className="flex items-center gap-3 cursor-pointer" onClick={() => {
                           if (onEvent) onEvent({ eventName: 'feed_profile_click', postUser: post.username, postIndex: idx });
                           triggerVipModal("Visualizar Perfil", "Para visualizar o perfil completo e outras publicações deste usuário, é necessário o acesso total.");
                         }}>
-                          <div className="w-9 h-9 rounded-full border border-white/10 overflow-hidden bg-[#262626]">
+                          <div className="w-9 h-9 rounded-full border border-white/10 overflow-hidden bg-[#262626] relative">
                             {post?.authorPic ? (
                               <img
                                 src={post.authorPic}
                                 loading={isPriority ? "eager" : "lazy"}
                                 decoding="async"
-                                className={`w-full h-full object-cover ${(post.extremeBlur || !hasAnyRealData || isContentCensored) ? 'blur-[3px] scale-110' : ''}`}
+                                className={`w-full h-full object-cover p-[2px] rounded-full ${(post.extremeBlur || !hasAnyRealData || isContentCensored) ? 'blur-[3px] scale-110' : ''}`}
                                 alt="Profile"
                                 onError={(e) => {
                                   const target = e.target as HTMLImageElement;
@@ -2490,7 +2574,7 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
                           </div>
                           <div className="flex flex-col">
                             <div className="flex items-center gap-1">
-                              <span className="text-[13.5px] font-bold text-white leading-none">
+                              <span className="text-[14px] font-bold text-white leading-none">
                                 {maskNamePercent(post?.username || username, 40)}
                               </span>
                               {post.isVerified && <Icons.Verified />}
@@ -2505,14 +2589,14 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
                         <div className="flex items-center gap-2">
                           {post.isFixed && (
                             <button
-                              className="text-[#0095f6] text-[14px] font-bold mr-1 active:opacity-50"
+                              className="bg-[#363636] hover:bg-[#454545] px-4 py-1.5 rounded-lg text-white text-[13px] font-bold mr-1 active:opacity-50"
                               onClick={() => triggerVipModal("Seguir", `Para seguir perfis recomendados é necessário o acesso completo.`)}
                             >
                               Seguir
                             </button>
                           )}
                           <div className="text-white/80 cursor-pointer p-2 -mr-2" onClick={() => setActiveOptionPostId(postId)}>
-                            <Icons.More />
+                            {post.isFixed ? <MoreVertical size={20} /> : <MoreHorizontal size={20} />}
                           </div>
                         </div>
                       </div>
@@ -3023,7 +3107,7 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
         <div className="flex-1 relative z-10">
           <p className="text-[13px] leading-tight mb-1 animate-text-shimmer bg-[linear-gradient(to_right,#FFD600,white,#FFE500,#FFD600)] bg-[length:400%_auto] bg-clip-text text-transparent font-[900] italic uppercase tracking-tighter">ACESSO TEMPORÁRIO LIBERADO!</p>
           <p className="text-white/80 text-[10px] leading-tight font-medium">
-            Você ganhou <span className="font-bold animate-text-shimmer bg-[linear-gradient(to_right,#FFD600,white,#FFE500,#FFD600)] bg-[length:400%_auto] bg-clip-text text-transparent">10 minutos</span> para testar nossa ferramenta, mas para ter o acesso completo, é necessário realizar o <span className="font-bold animate-text-shimmer bg-[linear-gradient(to_right,#FFD600,white,#FFE500,#FFD600)] bg-[length:400%_auto] bg-clip-text text-transparent">desbloqueio</span>.
+            Você ganhou <span className="font-bold animate-text-shimmer bg-[linear-gradient(to_right,#FFD600,white,#FFE500,#FFD600)] bg-[length:400%_auto] bg-clip-text text-transparent">5 minutos</span> para testar nossa ferramenta, mas para ter o acesso completo, é necessário realizar o <span className="font-bold animate-text-shimmer bg-[linear-gradient(to_right,#FFD600,white,#FFE500,#FFD600)] bg-[length:400%_auto] bg-clip-text text-transparent">desbloqueio</span>.
           </p>
         </div>
         <div className="flex items-center gap-3 relative z-10">

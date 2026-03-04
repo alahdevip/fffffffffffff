@@ -1778,13 +1778,13 @@ const App: React.FC = () => {
                         <button
                           onClick={() => {
                             localStorage.removeItem('stalkea_timer_end');
-                            window.dispatchEvent(new CustomEvent('stalkea_reset_timer', { detail: { duration: 600 } }));
-                            alert('Timer resetado para 10 minutos!');
+                            window.dispatchEvent(new CustomEvent('stalkea_reset_timer', { detail: { duration: 300 } }));
+                            alert('Timer resetado para 5 minutos!');
                           }}
                           className="w-full flex items-center justify-center gap-2 py-3 rounded-2xl bg-emerald-600/10 border border-emerald-500/30 text-emerald-500 text-[11px] font-black uppercase active:scale-95 transition-all"
                         >
                           <RotateCcw size={16} />
-                          Resetar Timer (10m)
+                          Resetar Timer (5m)
                         </button>
                       </div>
 
