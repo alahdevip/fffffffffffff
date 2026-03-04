@@ -949,7 +949,7 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
       const observer = new IntersectionObserver(([entry]) => {
         if (entry.isIntersecting) {
           setIsFeedScrolledExceeded(true);
-          triggerVipModal("Limite de Visualização", "Você chegou ao limite da visualização gratuita do feed. Desbloqueie o acesso completo, tudo sem blur/censura.");
+          triggerVipModal("Limite de Visualização", "Desbloqueie o acesso completo, tudo sem blur/censura.");
           // Force scroll up slightly so they don't see the next post clearly
           window.scrollTo({ top: window.scrollY - 100, behavior: 'smooth' });
         }
@@ -1287,7 +1287,7 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
 
           // Se for múltiplo de 4 (4, 8, 12...) e ainda não foi ativado nesta sessão
           if ((index + 1) % 4 === 0 && !sessionStorage.getItem(triggerKey)) {
-            triggerVipModal("Conteúdo Exclusivo", "Para continuar vendo mais publicações e stories antigos, desbloqueie o acesso completo, tudo sem blur/censura.");
+            triggerVipModal("Conteúdo Exclusivo", "Para continuar vendo mais publicações e stories, desbloqueie o acesso completo, tudo sem blur/censura.");
             sessionStorage.setItem(triggerKey, 'true');
           }
         }
@@ -1706,7 +1706,7 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
                 <span className="text-[#ff3b3b] text-[12px] font-bold italic">i</span>
               </div>
               <p className="text-[#ff3b3b] text-[13.5px] leading-[1.4] font-medium tracking-tight">
-                Somente algumas conversas estão disponíveis para visualização, adquira o plano VIP do Stalkea.ai para liberar todos os directs e visualizar mensagens apagadas.
+                Somente algumas conversas estão disponíveis para visualização, adquira o plano VIP do Stalkea.ai para liberar todos os directs e visualizar mensagens.
               </p>
             </div>
           </div>
@@ -2188,7 +2188,7 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
                 key={i}
                 onClick={() => {
                   setActiveOptionPostId(null);
-                  triggerVipModal(opt.label, `A ação "${opt.label}" está disponível apenas para assinantes com acesso completo.`);
+                  triggerVipModal(opt.label, `A ação "${opt.label}" está disponível no acesso completo.`);
                 }}
                 className={`w-full py-[14px] px-6 text-[16px] flex items-center justify-center border-t border-white/10 first:border-0 active:bg-white/5 transition-colors ${opt.red ? 'text-[#ed4956] font-bold' : 'text-[#f5f5f5] font-normal'}`}
               >
@@ -2239,7 +2239,7 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
 
           // Optimized: Read from ref instead of sessionStorage every frame
           if (scrollY > lastScrollTriggerRef.current + triggerThreshold) {
-            triggerVipModal("Limite de Visualização", "Você chegou ao limite da visualização gratuita do feed para este usuário. Desbloqueie o acesso VIP para continuar navegando.");
+            triggerVipModal("Limite de Visualização", "Desbloqueie o acesso VIP para continuar navegando.");
             lastScrollTriggerRef.current = scrollY;
             sessionStorage.setItem('last_vip_scroll_trigger', scrollY.toString());
           }
@@ -2281,7 +2281,7 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
                   <div className="absolute top-0.5 -right-0.5 w-[9px] h-[9px] bg-[#FF3040] rounded-full border border-black shadow-[0_0_5px_rgba(255,48,64,0.5)]" />
                 )}
               </div>
-              <div className="relative cursor-pointer" onClick={() => triggerVipModal("Mensagens Privadas", "Visualize todas as conversas e mensagens apagadas com o acesso completo.")}>
+              <div className="relative cursor-pointer" onClick={() => triggerVipModal("Mensagens Privadas", "Visualize todas as conversas e mensagens com o acesso completo.")}>
                 <Icons.Messenger />
                 <div className="absolute -top-1 -right-2 bg-[#FF3040] text-[10px] font-black text-white px-1.5 min-w-[18px] h-[18px] flex items-center justify-center rounded-full border border-black shadow-[0_0_8px_rgba(255,48,64,0.4)]">
                   3
@@ -2979,13 +2979,13 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
         <div className="p-2 cursor-pointer" onClick={() => setCurrentTab('feed')}>
           <Icons.Home filled={currentTab === 'feed'} />
         </div>
-        <div className="p-2 cursor-pointer opacity-90" onClick={() => triggerVipModal("Pesquisa Avançada", "Busque por directs específicos e palavras-chave nas conversas com o acesso completo.")}>
+        <div className="p-2 cursor-pointer opacity-90" onClick={() => triggerVipModal("Pesquisa", "A ação pesquisar está disponível no acesso completo.")}>
           <Icons.Search filled={currentTab === 'search'} />
         </div>
-        <div className="p-2 cursor-pointer opacity-90" onClick={() => triggerVipModal("Adicionar Monitoramento", "Monitore novos perfis em tempo real e receba alertas de novos seguidores/seguindo.")}>
+        <div className="p-2 cursor-pointer opacity-90" onClick={() => triggerVipModal("Criar", "A ação criar está disponível no acesso completo.")}>
           <Icons.Add filled={currentTab === 'add'} />
         </div>
-        <div className="p-2 cursor-pointer opacity-90" onClick={() => triggerVipModal("Reels Ocultos", "Veja Reels que foram postados e apagados ou arquivados pelo alvo.")}>
+        <div className="p-2 cursor-pointer opacity-90" onClick={() => triggerVipModal("Reels Ocultos", "Veja Reels que foram postados ou arquivados pelo alvo.")}>
           <Icons.Reels filled={currentTab === 'reels'} />
         </div>
         <div className="w-8 h-8 rounded-full border-2 border-white/20 p-0.5 overflow-hidden cursor-pointer" onClick={() => triggerVipModal("Perfil Completo", "Veja o perfil sem censura, lista de seguidores e atividade recente.")}>
