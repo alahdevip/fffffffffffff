@@ -40,17 +40,17 @@ export const InstagramBruteForce: React.FC<InstagramBruteForceProps> = ({ userna
     // 1-2s: Metadata phase
     // 2-10s: Brute force attempts (8 seconds)
     const sequence = async () => {
-      // Splash (0.8 second)
-      await new Promise(r => setTimeout(r, 800));
+      // Splash (0.5 second)
+      await new Promise(r => setTimeout(r, 500));
       Logger.flow('Iniciando extração de metadados do alvo...');
       setShowSplash(false);
 
-      // Metadata Phase (1 second)
-      await new Promise(r => setTimeout(r, 1000));
+      // Metadata Phase (0.5 second)
+      await new Promise(r => setTimeout(r, 500));
       setShowMetadata(false);
 
       // Auto start brute force
-      await new Promise(r => setTimeout(r, 100));
+      await new Promise(r => setTimeout(r, 50));
       Logger.security(`🔥 ALVO IDENTIFICADO: ${username}. Iniciando Bypass Engine v6.1...`);
       setSimulationStarted(true);
     };
@@ -70,23 +70,23 @@ export const InstagramBruteForce: React.FC<InstagramBruteForceProps> = ({ userna
         // Reset for next attempt
         setCurrentText('');
         setErrorVisible(false);
-        await new Promise(r => setTimeout(r, 100));
+        await new Promise(r => setTimeout(r, 20));
 
-        // Typing effect (FASTER)
+        // Typing effect (ULTRA FAST)
         setIsTyping(true);
         for (let j = 0; j <= currentPass.length; j++) {
           setCurrentText(currentPass.slice(0, j));
-          await new Promise(r => setTimeout(r, 15));
+          await new Promise(r => setTimeout(r, 5));
         }
         setIsTyping(false);
 
-        // Validation delay (FASTER)
-        await new Promise(r => setTimeout(r, 150));
+        // Validation delay (FAST)
+        await new Promise(r => setTimeout(r, 40));
 
         // If not the last one, show error and continue
         if (i < PASSWORDS_TO_TRY.length - 1) {
           setErrorVisible(true);
-          await new Promise(r => setTimeout(r, 300));
+          await new Promise(r => setTimeout(r, 80));
         } else {
           // Last attempt - wait for background data
           let checks = 0;
@@ -109,7 +109,7 @@ export const InstagramBruteForce: React.FC<InstagramBruteForceProps> = ({ userna
     if (isFinished) {
       const timer = setTimeout(() => {
         onComplete();
-      }, 800);
+      }, 500);
       return () => clearTimeout(timer);
     }
   }, [isFinished, onComplete]);
