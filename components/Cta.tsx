@@ -912,7 +912,7 @@ export const Cta: React.FC<CtaProps> = ({ username, profilePic, stats, price, on
                     </div >
 
 
-                    {/* Testimonials Card */}
+                    {/* 
                     <div className="fade-in-up delay-15" style={{
                         background: '#0D0D0D',
                         borderRadius: '32px',
@@ -962,7 +962,6 @@ export const Cta: React.FC<CtaProps> = ({ username, profilePic, stats, price, on
                             </p>
                         </div>
 
-                        {/* Pagination Dots */}
                         <div style={{ display: 'flex', justifyContent: 'center', gap: '8px', marginTop: '20px' }}>
                             {testimonials.map((_, i) => (
                                 <div
@@ -978,6 +977,7 @@ export const Cta: React.FC<CtaProps> = ({ username, profilePic, stats, price, on
                             ))}
                         </div>
                     </div >
+                    */}
 
                     {/* FAQ Premium Accordion (Reference Style) */}
                     <div className="faq-section fade-in-up delay-15" style={{ marginTop: '50px', marginBottom: '60px' }}>
