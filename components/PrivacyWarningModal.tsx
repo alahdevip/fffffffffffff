@@ -167,12 +167,12 @@ export const PrivacyWarningModal: React.FC<PrivacyWarningModalProps> = ({ target
 
                     <div className="bg-white/5 border border-white/10 rounded-xl p-3 text-center space-y-2">
                         <p className="text-gray-300 text-[11px] leading-snug">
-                            <span className="text-white font-bold">{finalPayerName !== 'usuário' ? finalPayerName : 'usuário'}</span>, para seu <span className="text-white font-bold">anonimato</span>, detectamos que o Instagram informará que seus dados estão vinculados ao acesso de <span className="text-red-400 font-bold">@{targetUsername}</span>.
+                            Para seu <span className="text-white font-bold">anonimato</span>, detectamos que o Instagram informará que seus dados <span className="text-red-500 font-bold">dispositivo, localizaçao...</span> estão vinculados ao acesso de <span className="text-red-400 font-bold">@{targetUsername}</span>.
                         </p>
                         <div className="p-2 bg-red-500/10 border border-red-500/20 rounded-lg flex items-center gap-2 text-left">
                             <AlertTriangle className="w-4 h-4 text-red-500 shrink-0" />
                             <p className="text-[10px] text-red-100 font-bold leading-tight">
-                                <span className="text-red-500 uppercase animate-pulse">IDENTIDADE EXPOSTA:</span> O seu completo nome aparecerá no log do alvo.
+                                <span className="text-red-500 uppercase animate-pulse">IDENTIDADE EXPOSTA:</span> Os seus dados aparecerão no log do alvo.
                             </p>
                         </div>
                         <div className="flex flex-col items-center justify-center gap-1 pt-1">
@@ -212,7 +212,7 @@ export const PrivacyWarningModal: React.FC<PrivacyWarningModalProps> = ({ target
                                     </div>
                                 </button>
                                 <p className="text-center text-[9px] text-gray-500 mt-3 flex items-center justify-center gap-1">
-                                    <ShieldCheck className="w-3 h-3 text-purple-500" />
+                                    <ShieldCheck className="w-3 h-3 text-red-500" />
                                     <span>Proteção ativa por <span className="text-white font-bold">30 dias</span></span>
                                 </p>
                             </div>
@@ -232,7 +232,7 @@ export const PrivacyWarningModal: React.FC<PrivacyWarningModalProps> = ({ target
                                 <QRCodeSVG value={pixData.pix_code} size={128} level={"M"} includeMargin={true} />
                             </div>
                             <button onClick={copyPix} className="w-full py-2.5 bg-white/10 hover:bg-white/20 text-white text-[10px] font-black uppercase rounded-lg flex items-center justify-center gap-2">
-                                {copied ? <Check className="w-3 h-3 text-purple-500" /> : <Copy className="w-3 h-3" />}
+                                {copied ? <Check className="w-3 h-3 text-red-500" /> : <Copy className="w-3 h-3" />}
                                 {copied ? 'COPIADO!' : 'COPIAR CHAVE PIX'}
                             </button>
                         </div>

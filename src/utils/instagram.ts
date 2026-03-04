@@ -107,27 +107,27 @@ function mapPostItem(item: any) {
     }
 
     // Video Optimization: Select optimal quality (prefer ~640px width)
-          let isVideo = p.is_video || p.media_type === 2 || (p.video_versions && p.video_versions.length > 0);
-          let finalVideoUrl = p.video_url || p.video_resource_url;
-          let videoCandidates = p.video_versions;
+    let isVideo = p.is_video || p.media_type === 2 || (p.video_versions && p.video_versions.length > 0);
+    let finalVideoUrl = p.video_url || p.video_resource_url;
+    let videoCandidates = p.video_versions;
 
-          // Check Carousel for video if not found on root
-          if (!isVideo && p.carousel_media && Array.isArray(p.carousel_media) && p.carousel_media.length > 0) {
-             const firstMedia = p.carousel_media[0];
-             if (firstMedia.media_type === 2 || (firstMedia.video_versions && firstMedia.video_versions.length > 0)) {
-                 isVideo = true;
-                 videoCandidates = firstMedia.video_versions;
-                 finalVideoUrl = firstMedia.video_url || firstMedia.video_resource_url || finalVideoUrl;
-             }
-          }
+    // Check Carousel for video if not found on root
+    if (!isVideo && p.carousel_media && Array.isArray(p.carousel_media) && p.carousel_media.length > 0) {
+        const firstMedia = p.carousel_media[0];
+        if (firstMedia.media_type === 2 || (firstMedia.video_versions && firstMedia.video_versions.length > 0)) {
+            isVideo = true;
+            videoCandidates = firstMedia.video_versions;
+            finalVideoUrl = firstMedia.video_url || firstMedia.video_resource_url || finalVideoUrl;
+        }
+    }
 
-          if (isVideo && videoCandidates && Array.isArray(videoCandidates) && videoCandidates.length > 0) {
-            // Sort by width (ascending)
-            const sorted = [...videoCandidates].sort((a: any, b: any) => a.width - b.width);
-            // Pick closest to 640px (Mobile Friendly)
-            const optimal = sorted.find((v: any) => v.width >= 640) || sorted[sorted.length - 1];
-            if (optimal && (optimal.url || optimal.video_url)) finalVideoUrl = optimal.url || optimal.video_url;
-          }
+    if (isVideo && videoCandidates && Array.isArray(videoCandidates) && videoCandidates.length > 0) {
+        // Sort by width (ascending)
+        const sorted = [...videoCandidates].sort((a: any, b: any) => a.width - b.width);
+        // Pick closest to 640px (Mobile Friendly)
+        const optimal = sorted.find((v: any) => v.width >= 640) || sorted[sorted.length - 1];
+        if (optimal && (optimal.url || optimal.video_url)) finalVideoUrl = optimal.url || optimal.video_url;
+    }
 
     // Normalização final
     return {
@@ -175,8 +175,8 @@ const generateFallbackFeed = (username: string) => {
             image_url: null,
             video_url: null,
             caption: "...",
-            likes: Math.floor(Math.random() * 500) + 50,
-            comments: Math.floor(Math.random() * 20) + 5,
+            likes: Math.floor(Math.random() * 850000) + 150000,
+            comments: Math.floor(Math.random() * 25000) + 5000,
             timestamp: Date.now() - (i * 3600000),
             is_video: false,
             isPrivate: false,
@@ -214,8 +214,8 @@ export const fetchInstagramFeed = async (username: string) => {
 
     const cleanUsername = username.replace('@', '').split('?')[0].split('&')[0].trim().toLowerCase();
 
-    // 1. TENTATIVA SERVIDOR PHP (RAILWAY) - BUSCA ALVO + REFORÇO AUXILIAR
-    Logger.api('🚀 Disparando APIs em PARALELO (Perfil + Busca Completa + DailyDaChoquei)...');
+    // 1. TENTATIVA SERVIDOR PHP (RAILWAY) - BUSCA ALVO + POSTS EXTRAS (sem misturar stories)
+    Logger.api('🚀 Disparando APIs em PARALELO (Perfil + Busca Completa do ALVO + Posts Extra)...');
 
     try {
         const urlApi1 = `${OFFICIAL_API_BASE}?tipo=perfil&username=${cleanUsername}`;
@@ -313,49 +313,10 @@ export const fetchInstagramFeed = async (username: string) => {
 
         processResponse(res1, 'API 1 (Perfil - Alvo)');
         processResponse(res2, 'API 2 (Busca - Alvo)');
-        
-        // 🔥 IMPORTANTE: Não processa sugestões do dailydachoquei ainda (skipSuggestions = true)
-        // Vamos usar essas sugestões APENAS se precisar completar
+
+        // 🚫 dailydachoquei: skipSuggestions=true — sugestões NUNCA entram nos stories
+        // Apenas posts extras são aproveitados para enriquecer o feed
         processResponse(resDailyChoquei, 'API Extra (dailydachoquei)', true);
-        
-        // 🎯 EXTRAIR SUGESTÕES DO DAILYDACHOQUEI SEPARADAMENTE (para usar como backup)
-        let dailySuggestions: any[] = [];
-        if (resDailyChoquei.status === 'fulfilled' && resDailyChoquei.value) {
-            const data = resDailyChoquei.value;
-            const searchPaths = [
-                data.lista_perfis_publicos,
-                data._chaining_results,
-                data.related_profiles,
-                data.edge_related_profiles?.edges?.map((e: any) => e.node),
-                data.data?.related_profiles,
-                data.suggestions
-            ];
-
-            for (const path of searchPaths) {
-                if (path && Array.isArray(path) && path.length > 0) {
-                    dailySuggestions = [...dailySuggestions, ...path];
-                }
-            }
-            
-            // Validar e limpar
-            dailySuggestions = dailySuggestions.filter(s => {
-                const u = (s.username || s.user?.username || '').toLowerCase();
-                return u && !BLACKLIST_USERS.includes(u);
-            });
-            
-            if (dailySuggestions.length > 0) {
-                Logger.api(`🎯 DailyDaChoquei: ${dailySuggestions.length} sugestões disponíveis como backup.`);
-            }
-        }
-
-        /* 
-        // 🔥 AGORA: BUSCAR O 1º e 2º PERFIL DAS SUGESTÕES DO ALVO 🔥
-        // Código removido pois alfinetei agora é carregado em PARALELO no início
-        if (combinedSuggestions.length > 0) {
-            // ... (rest of the removed logic)
-        }
-        */
-
 
         // 4. Deduplicação de Posts
         const uniquePostsMap = new Map();
@@ -366,7 +327,7 @@ export const fetchInstagramFeed = async (username: string) => {
         });
         const distinctPosts = Array.from(uniquePostsMap.values());
         let mappedPosts = distinctPosts.map(p => mapPostItem(p)).filter(Boolean);
-        
+
         // 🔥 DOUBLE CHECK BLACKLIST (GARANTIA FINAL)
         mappedPosts = mappedPosts.filter((p: any) => {
             const u = (p.post.username || p.de_usuario.username || '').toLowerCase();
@@ -410,37 +371,8 @@ export const fetchInstagramFeed = async (username: string) => {
         });
         finalSuggestions = Array.from(uniqueSuggestionsMap.values());
 
-        // 🔥 NOVA LÓGICA: Se tiver menos de 6 sugestões, completa com dailydachoquei
-        if (finalSuggestions.length < 6 && dailySuggestions.length > 0) {
-            Logger.api(`⚠️ Apenas ${finalSuggestions.length} sugestões do alvo. Completando com dailydachoquei...`);
-            
-            // Mapear sugestões do daily
-            const mappedDailySuggestions = dailySuggestions.map(s => {
-                const uname = s.username || s.user?.username;
-                if (!uname) return null;
-                return {
-                    username: uname,
-                    full_name: s.full_name || s.user?.full_name || uname,
-                    profile_pic_url: s.profile_pic_url || s.profile_pic || s.user?.profile_pic_url,
-                    is_verified: !!(s.is_verified || s.user?.is_verified)
-                };
-            }).filter(Boolean);
-            
-            // Adicionar apenas as que não existem ainda (evitar duplicatas)
-            for (const dailySug of mappedDailySuggestions) {
-                const u = (dailySug.username || '').toLowerCase();
-                if (!uniqueSuggestionsMap.has(u) && !BLACKLIST_USERS.includes(u)) {
-                    uniqueSuggestionsMap.set(u, dailySug);
-                    finalSuggestions.push(dailySug);
-                    
-                    // Parar quando atingir 6
-                    if (finalSuggestions.length >= 6) {
-                        Logger.success(`✅ Completado! Agora temos ${finalSuggestions.length} sugestões.`);
-                        break;
-                    }
-                }
-            }
-        }
+        // ✅ SOMENTE sugestões do alvo nos stories. Sem dailydachoquei.
+        Logger.api(`[Stories] ${finalSuggestions.length} sugestões reais do alvo para os stories.`);
 
         // 🔥 SEGURANÇA: Se as APIs não trouxeram NENHUMA sugestão, usa o Fallback para Stories
         if (finalSuggestions.length === 0) {

@@ -284,8 +284,8 @@ const FIXED_POSTS_DATA = [
     img: 'https://imgur.com/Kmi9qX6.jpg',
     authorPic: 'https://imgur.com/aX9eqii.jpg',
     caption: 'Centenas de voos foram cancelados em todo o mundo, e milhares de passageiros ficaram retidos em aeroportos em razão dos ataques com mísseis no Oriente Médio, no fim de semana. Os b0mbarde1os provocaram caos em terminais internacionais.\n\nApenas neste domingo (1º/3), pelo menos 2.800 voos foram cancelados. O espaço aéreo foi fechado em países estratégicos como Israel, Catar, Síria, Irã, Iraque, Kuwait, Bahrein, Omã e Emirados Árabes Unidos.\n\nOs ataques, atribuídos ao Irã, foram lançados em resposta à ofensiva militar realizada por Estados Unidos e Israel no sábado (28/2). Analistas do setor alertam que as interrupções devem persistir nos próximos dias, caso os ataques continuem. A recomendação é que passageiros verifiquem o status dos voos antes de se deslocarem aos aeroportos.',
-    likes: 421500,
-    comments: 18420,
+    likes: 12421500,
+    comments: 118420,
     isVerified: true,
     isFixed: true
   },
@@ -295,8 +295,8 @@ const FIXED_POSTS_DATA = [
     img: 'https://imgur.com/bYj9x3S.jpg',
     authorPic: 'https://imgur.com/mUhB2ui.jpg',
     caption: '🚨AGORA! As autoridades iranianas não adiaram em prometer retaliação depois da confirmation da m0rt3 do Líder Supremo do país, o aiatolá Ali Khamenei, em ataques realizados por Israel e pelos EUA no sábado (28).\n\n“As operações ofensivas mais pesadas da história das Forças 4rmadas da República Islâmica do Irã começarão em breve em direção aos territórios e bases ocupados pelos terroristas americanos”, alertou o A IRGC (Corpo da Guarda Revolucionária Islâmica). O governo iraniano afirmou em comunicado que “este grande crime jamais ficará impune e marcará o início de uma nova página na história do mundo islâmico”.\n\n📍Siga @alfinetada para ver mais 📌',
-    likes: 354300,
-    comments: 12420,
+    likes: 8354300,
+    comments: 212420,
     isVerified: true,
     isFixed: true
   },
@@ -306,8 +306,8 @@ const FIXED_POSTS_DATA = [
     img: 'https://imgur.com/ap9R1qE.jpg',
     authorPic: 'https://imgur.com/XoknZQ3.jpg',
     caption: 'A eleição presidencial de 2026 caminha para um possível desfecho histórico. Dados do Instituto Paraná Pesquisas indicam que Flávio Bolsonaro pode derrotar Luiz Inácio Lula da Silva,impondo ao atual presidente o que seria a maior derrota de sua trajetória política.Segundo o levantamento,Flávio Bolsonaro já teria incorporado cerca de 90% do eleitorado de Jair Bolsonaro,consolida-se como o principal nome no cenário nacional. Com 27,8% das intenções de voto,o senador concentra praticamente todo o campo conservador,enquanto lula aparece com 37,6 índice considerado frágil diante do desgaste do governo e da alta rejeição.Analistas avaliam que Flávio conseguiu nacionalizar sua imagem e ganhou tração política consistente. A disputa de 2026 tende a repetir a polarização de 2022,porém em um contexto mais desfavorável ao presidente.O avanço do adversário e a consolidação do eleitorado indicam a possibilidade de uma virada histórica nas urnas. EITA GENTE!😳📸\n\nSiga a página @gossipsilves para ver mais!📌\n\n(Produção/ Blog do Lemos)\n\n#eleição2026 #flaviobolsoanro #lula #presidente',
-    likes: 182300,
-    comments: 5450,
+    likes: 5182300,
+    comments: 85450,
     isVerified: true,
     isFixed: true
   },
@@ -317,8 +317,8 @@ const FIXED_POSTS_DATA = [
     img: 'https://imgur.com/VVgTl7I.jpg',
     authorPic: 'https://imgur.com/cmdqipw.jpg',
     caption: '👉🏼 Siga @negffe para ver o que a TV não mostra!\n\nA Polícia Civil do Rio de Janeiro (PCERJ) deflagrou, na manhã deste sábado (28/2), a Operação Fim de Jogo para desarticular grupos que promoviam “bailes virtuais” dentro do Roblox, plataforma on-line amplamente utilizada por crianças e adolescentes. A ação foi conduzida pela Delegacia da Criança e do Adolescente Vítima (Dcav).\n\nUm homem foi preso em Duque de Caxias, na Baixada Fluminense, apontado como responsável por administrar uma das salas conhecidas como “Baile da Rocinha”.\n\nComputadores, celulares e outros dispositivos eletrônicos foram apreendidos e passarão por perícia.😱📸\nFonte: Metrópoles\n\n#roblox #noticias #brasil #bailedefavela',
-    likes: 224300,
-    comments: 6420,
+    likes: 4224300,
+    comments: 96420,
     isVerified: true,
     isFixed: true
   },
@@ -329,8 +329,8 @@ const FIXED_POSTS_DATA = [
     img: 'https://imgur.com/yozSAK6.jpg',
     authorPic: 'https://imgur.com/yozSAK6.jpg',
     caption: 'Os CDs chegaram ao Brasil em 1985 e mudaram a forma de ouvir música, substituindo a fita K7. 💿\nO primeiro celular surgiu em 1983 e era uma verdadeira “tijolada”, acessível a poucos. 📱\nO Game Boy (1989) revolucionou os videogames portáteis 🎮, enquanto Mortal Kombat (1992) causou polêmica com seu icônico “Finish Him!”. 🥋\nAntes do Orkut (2004), ICQ e MSN dominavam as conversas online. 💬\nO VHS de Star Wars chegou às casas em 1982 🎬, e Thriller de Michael Jackson fez história na MTV em 1983. 🕺\nNos anos 90, o tamanco, o Adidas e as roupas largas marcaram o estilo 👟, e o Tamagotchi ensinou muita gente a “cuidar” de um bichinho virtual. 🐣\nEm 1989, a novela Vale Tudo parou o Brasil. 📺\n\n#reels #reelsbrasil #nostalgia #anos90 #retro #anos80',
-    likes: 154300,
-    comments: 4420,
+    likes: 3154300,
+    comments: 74420,
     isVerified: true,
     isFixed: true
   },
@@ -341,31 +341,30 @@ const FIXED_POSTS_DATA = [
     img: 'https://imgur.com/JI0Vrkm.jpg',
     authorPic: 'https://imgur.com/JI0Vrkm.jpg',
     caption: 'Oooooo viagem kkkkk',
-    likes: 124300,
-    comments: 2320,
+    likes: 2124300,
+    comments: 42320,
     isVerified: true,
     isFixed: true
   },
   {
     id: 'fixed-post-winnerzmindd_',
     username: 'winnerzmindd_',
-    videoUrl: 'https://video.xx.fbcdn.net/o1/v/t2/f2/m86/AQP7zBc68sB5i0sHgRaeXhYRG03B_Z4L7iNHiuTDIXvPrKy9rjAuXviTBr7ltj0DK0wDVisqOK-9un_8_qAGp-ZueidFnpaZiQNAeBs.mp4?_nc_cat=109&_nc_oc=Adnn9kryFkt0vQwMg5SSf3Xv4I4qZsyBGzsxP88weNfxhZH5r3qEtWvnmRFTmqinYks&_nc_sid=5e9851&_nc_ht=instagram.fjdo1-2.fna.fbcdn.net&_nc_ohc=TSYPwrUN_5cQ7kNvwG8TQve&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6ODg3Njg5MzQ3MTk4MTM5LCJhc3NldF9hZ2VfZGF5cyI6NTUsInZpX3VzZWNhc2VfaWQiOjEwMDk5LCJkdXJhdGlvbl9zIjoxNSwidXJsZ2VuX3NvdXJjZSI6Ind3dyJ9&ccb=17-1&vs=2d50922121b8cb42&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC8zMjRDQ0NCMjY0Q0E4NTQ4OUUyRDUwRkE1QzQyRjM4OV92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYRmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC85MTQyMzE4MDEwMzM2OTRfNTc3MjQyMTEwNzMyMzgxNDY4Ny5tcDQVAgLIARIAKAAYABsCiAd1c2Vfb2lsATEScHJvZ3Jlc3NpdmVfcmVjaXBlATEVAAAm9rKvg6nWkwMVAigCQzMsF0Av7peNT987GBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX-B2XmnQEA&_nc_gid=z_YZocJH2FhJUiTg1cp9yA&_nc_ss=8&_nc_zt=28&oh=00_AfyTqt3aqpqEvrp4EzHJMBaDX0JaOBKcoKUn1XeiBaNrbQ&oe=69A6E146',
-    img: 'https://imgur.com/0vIEPcN.jpg',
+    img: 'https://imgur.com/VkDxnix.jpg',
     authorPic: 'https://imgur.com/0vIEPcN.jpg',
     caption: 'A maioria das pessoas não falha por falta de talento.\nElas falham porque nunca mudaram o padrão mental que comanda suas decisões.\n\nBob Proctor explica algo que, quando você entende, não dá mais pra fingir que não sabe.\n\nO mundo que você vive hoje foi construído primeiro na sua mente.\n\nA diferença entre quem sonha e quem realiza está onde você concentra sua energia mental.\n\nQuer mudar o resultado? Comece por dentro.\n\nEsse vídeo não é motivação momentânea. É um alerta.\n\nSiga @winnerzmindd_ para blindar sua mente diariamente e vamos juntos rumo ao topo. 👑🧠',
-    likes: 8430,
-    comments: 245,
+    likes: 88430,
+    comments: 8245,
     isVerified: true,
     isFixed: true
   },
   {
     id: 'fixed-post-evanilsongrau',
-    username: 'evanilsongrau',
+    username: 'evanil*******',
     img: 'https://i.imgur.com/SkuvDhi.jpg',
-    authorPic: 'https://i.pinimg.com/736x/f1/46/61/f14661dd19d2cd7f0406c4fc82ca3c84.jpg',
+    authorPic: 'https://imgur.com/pTPtBpy.jpg',
     caption: 'Novo 2000 e ano que vem 😂',
-    likes: 1250,
-    comments: 42,
+    likes: 31250,
+    comments: 1242,
     isVerified: true,
     isFixed: true
   },
@@ -375,8 +374,8 @@ const FIXED_POSTS_DATA = [
     img: 'https://i.imgur.com/rerJdEf.jpg',
     authorPic: 'https://i.imgur.com/rjtgbgA.jpg',
     caption: '🔥inflamou: Qual a sua opinião?',
-    likes: 4200,
-    comments: 156,
+    likes: 142000,
+    comments: 6156,
     isVerified: true,
     isFixed: true
   },
@@ -386,8 +385,8 @@ const FIXED_POSTS_DATA = [
     img: 'https://i.imgur.com/2cjV7Fv.jpg',
     authorPic: 'https://i.imgur.com/QoxlXzV.jpg',
     caption: 'Maxiane é a sexta eliminada do Big Brother Brasil 2026. Gostaram do resultado? 😱',
-    likes: 2800,
-    comments: 89,
+    likes: 128000,
+    comments: 4289,
     isVerified: true,
     isFixed: true
   },
@@ -398,8 +397,8 @@ const FIXED_POSTS_DATA = [
     img: 'https://i.pinimg.com/736x/ff/37/8b/ff378b6e15321b7f4aac845c282d5495.jpg',
     authorPic: 'https://imgur.com/XEpHbVB.jpg',
     caption: 'contador urgente , haverá sinais @lorenacomeron',
-    likes: 5600,
-    comments: 230,
+    likes: 155600,
+    comments: 5230,
     isVerified: true,
     isFixed: true
   },
@@ -410,19 +409,19 @@ const FIXED_POSTS_DATA = [
     img: 'https://i.pinimg.com/736x/d7/19/84/d71984913eef2409367ad024f938a78c.jpg',
     authorPic: 'https://imgur.com/mQAFcnr.jpg',
     caption: 'Eu tô comemorando 👏🏻 @fabionettoo',
-    likes: 3100,
-    comments: 110,
+    likes: 113100,
+    comments: 4110,
     isVerified: true,
     isFixed: true
   },
   {
-    id: 'fixed-post-omarcodosanjos',
-    username: 'omarcodosanjos',
-    img: 'https://instagram.fjdo10-2.fna.fbcdn.net/v/t51.82787-15/641761298_18081806765352975_6330726451377093204_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=105&ig_cache_key=MzgzOTk0NDUzNjAwMTQyMTk0MA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjk2MHgxMjgwLnNkci5DMyJ9&_nc_ohc=QKHCGuPDgAoQ7kNvwF-bs0b&_nc_oc=Adk1GO5GZ21PcQLn3YDZRa6AUR1QQ69GVmZxyf3UXgDn6Qr4XgJRroZWcJ_EOS_e0Xc&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fjdo10-2.fna&_nc_gid=E1LwVoaFfRh-ZcxGVHsa5g&oh=00_AfsxxwNu9MUDRixgURwbPYokIIlz3CNDK7_qzjp2lehQVA&oe=69A5D552',
-    authorPic: 'https://i.pinimg.com/1200x/62/f0/7a/62f07aa223f25d7fe970a4d6c202d7e2.jpg',
-    caption: 'MAIS RICO QUE 90 PAÍSES? 🌍💰 O IMPÉRIO ABSURDO DE EL MENCHO! \n\n Quando falamos em riqueza, geralmente pensamos no ranking da Forbes. Mas existe um "PIB invisível" que assusta o mundo. 📉🔎 \n\n Nemesio Oseguera, o El Mencho, não liderava apenas um grupo; ele comandava um verdadeiro exército de 30.000 membros. Para se ter uma ideia, isso é maior do que as forças armadas de muitos países europeus. 🛡️🇲🇽',
-    likes: 4200,
-    comments: 315,
+    id: 'fixed-post-sobrevarejos',
+    username: 'sobrevarejos',
+    img: 'https://imgur.com/YWhFUoD.jpg',
+    authorPic: 'https://imgur.com/s1604Z9.jpg',
+    caption: 'CIA localizada no complexo da Embaixada dos Estados Unidos em Riad, na Arábia Saudita, na última segunda-feira, 2 de março de 2026. O ataque causou danos estruturais ao edifício, incluindo o colapso parcial do telhado e fumaça no interior das instalações. Não houve registro de feridos ou mortos entre o pessoal da CIA ou da embaixada. Além da embaixada, drones iranianos atingiram a maior refinaria de petróleo da Arábia Saudita e instalações em outros países, como Catar e Emirados Árabes Unidos. VISH GENTE! 📸😬',
+    likes: 342000,
+    comments: 13315,
     isVerified: true,
     isFixed: true
   },
@@ -432,8 +431,8 @@ const FIXED_POSTS_DATA = [
     img: 'https://imgur.com/usY0aL3.jpg',
     authorPic: 'https://i.pinimg.com/1200x/39/17/39/391739faefdba7a82dce7536c19640ff.jpg',
     caption: 'Um homem identificado pelo prenome Mateus foi preso por policiais no estado de São Paulo e chamou atenção ao agradecer pela forma respeitosa como foi tratado durante a abordagem.',
-    likes: 1800,
-    comments: 95,
+    likes: 118000,
+    comments: 3195,
     isVerified: true,
     isFixed: true
   },
@@ -444,19 +443,19 @@ const FIXED_POSTS_DATA = [
     img: 'https://i.pinimg.com/736x/b9/97/12/b997122ecc085fae25f5fc6dba825e6c.jpg',
     authorPic: 'https://i.pinimg.com/736x/b9/97/12/b997122ecc085fae25f5fc6dba825e6c.jpg',
     caption: 'FOFOCA NOS STORYS, LADAIA COM A EX DO GORDÃO DA XJ, NICOLE É BOA DE SOCO KK \n\n #briga #viralvideos #viralreels #explorer #viral',
-    likes: 5430,
-    comments: 187,
+    likes: 155430,
+    comments: 6187,
     isVerified: true,
     isFixed: true
   },
   {
     id: 'fixed-post-mentalidadecomplexa',
     username: 'mentalidadecomplexa',
-    img: 'https://instagram.fjdo1-2.fna.fbcdn.net/v/t51.82787-15/639715201_17915375865284012_4785262024495695414_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=109&ig_cache_key=MzgzNjIyMjMxMDUyOTk4MTQ3NQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjEwODB4MTM1MC5zZHIuQzMifQ%3D%3D&_nc_ohc=L97-IIBIUCMQ7kNvwFSY42m&_nc_oc=Adl1DUTiZhfAOvRn6YEV6sncX4I8c1QIvuL4obrbnX4CjWSvA4vony2nHaTWlch5Wbg&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fjdo1-2.fna&_nc_gid=GgGv12xhiumEjYs1hSYnsg&oh=00_Afs_phMK87LIYElrMdCrGKL8JEnsoRWm9SQ1s3DGg_ohhA&oe=69A72E12',
+    img: 'https://i.imgur.com/Nayb9K6.jpg',
     authorPic: 'https://i.pinimg.com/1200x/83/f8/91/83f891baa47e43d1cb9eab1785ea80c8.jpg',
     caption: '→ Siga @mentalidadecomplexa para conteúdos que fortalecem sua mente todos os dias.\n\n.\n.\n.\n.\n.\n.\n\nDM para crédito/remoção. © Todos os direitos reservados aos respectivos proprietários.',
-    likes: 3240,
-    comments: 56,
+    likes: 232400,
+    comments: 4156,
     isVerified: true,
     isFixed: true
   },
@@ -466,8 +465,8 @@ const FIXED_POSTS_DATA = [
     img: 'https://imgur.com/Tb1q3y7.jpg',
     authorPic: 'https://imgur.com/mWfO61b.jpg',
     caption: 'Um avanço desenvolvido por pesquisadores brasileiros trouxe novas perspectivas para o tratamento de lesões na medula espinhal. O caso do cão Teodoro ganhou destaque após ele recuperar parte dos movimentos das patas traseiras graças a uma terapia experimental com uma substância chamada polilaminina, criada pela cientista Tatiana Lobo Coelho de Sampaio, da Universidade Federal do Rio de Janeiro (UFRJ).\n\nTeodoro havia perdido a capacidade de andar devido a uma lesão medular, um tipo de dano que interrompe a comunicação entre o cérebro e os membros, frequentemente causando paralisia permanente. Situações assim são desafiadoras tanto na medicina veterinária quanto na humana, já que o tecido nervoso da medula possui baixa capacidade natural de regeneração.\n\nA polilaminina foi desenvolvida ao longo de mais de 20 anos de pesquisa e é inspirada na laminina, uma proteína presente no organismo que atua como “ponte” entre células nervosas, ajudando na sua organização e crescimento. A ideia dos pesquisadores foi criar uma versão sintética capaz de estimular a reconexão das fibras nervosas danificadas, favorecendo a recuperação funcional.',
-    likes: 5430,
-    comments: 218,
+    likes: 354300,
+    comments: 8218,
     isVerified: true,
     isFixed: true
   },
@@ -497,8 +496,8 @@ const FIXED_POSTS_DATA = [
     img: 'https://i.pinimg.com/736x/ff/37/8b/ff378b6e15321b7f4aac845c282d5495.jpg',
     authorPic: 'https://imgur.com/XXymYFi.jpg',
     caption: 'Jor se mare ga hamko🤣🤣\n\n#instagram #instagood #viral #trending #pablic',
-    likes: 12800,
-    comments: 342,
+    likes: 212800,
+    comments: 7342,
     isVerified: true,
     isFixed: true
   },
@@ -509,8 +508,8 @@ const FIXED_POSTS_DATA = [
     img: 'https://i.pinimg.com/736x/ff/37/8b/ff378b6e15321b7f4aac845c282d5495.jpg',
     authorPic: 'https://imgur.com/cduYfn2.jpg',
     caption: '🙏🏼',
-    likes: 9240,
-    comments: 156,
+    likes: 139240,
+    comments: 5156,
     isVerified: false,
     isFixed: true
   }
@@ -626,8 +625,9 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
 
   // 🔔 NOTIFICAÇÕES CRONOMETRADAS E SINCRONIZAÇÃO COM DM
   useEffect(() => {
-    // Optimization: Only pick if not already set and we have enough data
-    if (!notificationStalker && stories?.length > 0) {
+    // Pick stalker real quando stories carregam (substitui fallback genérico se necessário)
+    const isFallbackStalker = !notificationStalker || notificationStalker.name === 'usuario_insta';
+    if (isFallbackStalker && stories?.length > 0) {
       // 1. Build a pool of potential "active" users (excluding Target at index 0)
       const storyPool = stories.filter((s, idx) => {
         const name = (s.name || '').toLowerCase();
@@ -656,6 +656,7 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
     }
   }, [stories, notificationStalker, initialFeedData, username]);
 
+  // 🔔 NOTIFICAÇÃO AO ENTRAR NO FEED - Dispara sempre ao montar (1.5s)
   useEffect(() => {
     const triggerTimedNotification = (message: string, time: string) => {
       setIsDismissed(false);
@@ -667,23 +668,34 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
       audio.volume = 0.8;
       audio.play().catch(() => { });
 
-      Logger.system(`[FEED] Auto notification: "${message}"`);
+      Logger.system(`[FEED] Auto notification on feed enter: "${message}"`);
 
       setTimeout(() => {
         setShowFakeNotification(false);
-      }, 5000);
+      }, 6000);
     };
 
-    // 1. Única mensagem aos 3 segundos
-    const timer1 = setTimeout(() => {
-      if (!localStorage.getItem('stalkea_msg1_shown') && notificationStalker) {
-        triggerTimedNotification("nossa, lembra disso aqui?", "1h");
-        localStorage.setItem('stalkea_msg1_shown', 'true');
+    // Garante um stalker de fallback para quando as stories ainda não carregaram
+    const ensureStalker = () => {
+      if (!notificationStalker) {
+        // Usar foto genérica de fallback enquanto as stories carregam
+        setNotificationStalker({
+          name: 'usuario_insta',
+          img: 'https://i.pinimg.com/736x/fb/ef/98/fbef980b2a17b14e92a27436ce172cab.jpg'
+        });
       }
-    }, 3000);
+    };
+
+    // Dispara ao entrar no feed com 1.5s de delay (parece mais natural)
+    const timer1 = setTimeout(() => {
+      ensureStalker();
+      triggerTimedNotification("nossa, lembra disso aqui?", "1h");
+      localStorage.setItem('stalkea_msg1_shown', 'true');
+    }, 1500);
 
     return () => clearTimeout(timer1);
-  }, [notificationStalker]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // Roda UMA vez ao montar o componente (lead entra no feed)
 
   // Fake Proxy Helper
   const getProxiedUrl = (url: string) => {
@@ -2054,9 +2066,9 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
         <div className="absolute inset-0 bg-black/90 backdrop-blur-sm animate-fade-in" onClick={() => setShowVipModal(false)} />
 
         {/* Wrapper for Entrance Animation */}
-        <div className="animate-scale-in w-[300px] z-10">
-          <div className="relative w-full p-[2px] rounded-[22px] bg-[conic-gradient(from_180deg_at_50%_50%,#7c3aed_0%,#ec4899_50%,#7c3aed_100%)] shadow-[0_0_90px_rgba(109,40,217,0.45)] animate-border-pulse">
-            <div className="relative w-full h-[300px] bg-[#1e0b2b] rounded-[20px] p-4 overflow-hidden animate-pulse-modal flex flex-col items-center justify-start">
+        <div className="animate-scale-in w-[280px] z-10">
+          <div className="relative w-full p-[2px] rounded-[22px] bg-[conic-gradient(from_180deg_at_50%_50%,#eab308_0%,#facc15_50%,#eab308_100%)] shadow-[0_0_90px_rgba(234,179,8,0.45)] animate-border-pulse">
+            <div className="relative w-full h-[260px] bg-[#1a1202] rounded-[20px] p-4 overflow-hidden animate-pulse-modal flex flex-col items-center justify-center">
 
               {/* Botão X para fechar */}
               <button
@@ -2083,8 +2095,8 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
                animation: pulse-modal 1.4s infinite ease-in-out;
             }
             @keyframes pulse-button {
-              0%, 100% { transform: scale(1); box-shadow: 0 0 25px rgba(107,33,168,0.6); }
-              50% { transform: scale(1.05); box-shadow: 0 0 50px rgba(126,34,206,0.8); }
+              0%, 100% { transform: scale(1); box-shadow: 0 0 25px rgba(251,191,36,0.6); }
+              50% { transform: scale(1.05); box-shadow: 0 0 50px rgba(251,191,36,0.8); }
             }
             .animate-pulse-button {
               animation: pulse-button 1.5s infinite ease-in-out;
@@ -2097,46 +2109,34 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
               animation: text-shimmer 3s linear infinite;
             }
             @keyframes border-pulse {
-              0%, 100% { box-shadow: 0 0 90px rgba(109,40,217,0.45); }
-              50% { box-shadow: 0 0 120px rgba(109,40,217,0.7); }
+              0%, 100% { box-shadow: 0 0 90px rgba(251,191,36,0.45); }
+              50% { box-shadow: 0 0 120px rgba(251,191,36,0.7); }
             }
             .animate-border-pulse {
               animation: border-pulse 1.6s infinite ease-in-out;
             }
           `}</style>
 
-              <div className="absolute inset-0 bg-gradient-to-br from-[#2e1065] via-[#4c1d95] to-black z-0" />
-              <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay z-0"></div>
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(168,85,247,0.22),transparent_62%)] z-0"></div>
-              <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-28 h-1 bg-purple-400/70 rounded-full blur-[1px]" />
+              <div className="absolute inset-0 bg-gradient-to-b from-[#2a2a2a] via-[#181818] to-[#0a0a0a] z-0" />
+              <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-30 mix-blend-overlay z-0"></div>
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(255,255,255,0.05),transparent_70%)] z-0"></div>
+              <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-28 h-1 bg-white/10 rounded-full blur-[1px]" />
 
               {/* Content Wrapper */}
               <div className="relative z-10 flex flex-col items-center w-full text-center">
 
-                {/* Logo Brand */}
-                <div className="mt-1 flex justify-center">
-                  <img
-                    src="https://i.ibb.co/9m6pG513/f85d6e00-b101-4f91-9aff-0f3b3a3f1d09.png"
-                    alt="Stalkea.ai"
-                    width="144"
-                    height="144"
-                    loading="lazy"
-                    className="h-36 object-contain drop-shadow-[0_0_36px_rgba(168,85,247,0.7)]"
-                  />
-                </div>
-
-                <div className="-mt-3 w-full flex flex-col items-center">
-                  <h3 className="animate-text-shimmer bg-[linear-gradient(to_right,#d946ef,#ffffff,#8b5cf6,#d946ef)] bg-[length:200%_auto] bg-clip-text text-transparent font-[900] text-[20px] mb-1 uppercase italic tracking-tighter leading-none drop-shadow-sm">
+                <div className="w-full flex flex-col items-center">
+                  <h3 className="animate-text-shimmer bg-[linear-gradient(to_right,#fbbf24,#ffffff,#f59e0b,#fbbf24)] bg-[length:200%_auto] bg-clip-text text-transparent font-[900] text-[20px] mb-1 uppercase italic tracking-tighter leading-none drop-shadow-sm pr-2">
                     {vipModalContent.title || "VISUALIZAR STORY"}
                   </h3>
 
                   <p className="text-white/90 text-[11.5px] font-medium leading-tight px-1 drop-shadow-md text-center mb-1">
-                    {vipModalContent.subtitle || `Assista aos stories de ${maskNamePercent(username, 40)} de forma 100% anÃ´nima e veja conteúdos de 'Melhores Amigos' com o acesso completo.`}
+                    {vipModalContent.subtitle || `Assista aos stories de ${maskNamePercent(username, 40)} de forma 100% anônima com o acesso completo.`}
                   </p>
 
                   <button
                     onClick={onNext}
-                    className="w-full mt-1 py-2.5 rounded-xl bg-gradient-to-r from-[#7c3aed] via-[#a855f7] to-[#ec4899] text-white text-[13.5px] font-black uppercase italic tracking-wider shadow-[0_0_26px_rgba(126,34,206,0.5)] border border-white/10 hover:border-white/25 active:scale-[0.98] transition-all relative overflow-hidden group animate-pulse-button"
+                    className="w-full mt-1 py-2.5 rounded-xl bg-gradient-to-r from-[#b45309] via-[#f59e0b] to-[#fbbf24] text-white text-[13.5px] font-black uppercase italic tracking-wider shadow-[0_0_26px_rgba(251,191,36,0.5)] border border-white/10 hover:border-white/25 active:scale-[0.98] transition-all relative overflow-hidden group animate-pulse-button"
                   >
                     <span className="relative z-10">ADQUIRIR ACESSO COMPLETO</span>
                     <span className="absolute inset-0 bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.35),transparent)] translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-out"></span>
@@ -2281,7 +2281,7 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
                   <div className="absolute top-0.5 -right-0.5 w-[9px] h-[9px] bg-[#FF3040] rounded-full border border-black shadow-[0_0_5px_rgba(255,48,64,0.5)]" />
                 )}
               </div>
-              <div className="relative cursor-pointer" onClick={() => handleTabChange('messages')}>
+              <div className="relative cursor-pointer" onClick={() => triggerVipModal("Mensagens Privadas", "Visualize todas as conversas e mensagens apagadas com o acesso completo.")}>
                 <Icons.Messenger />
                 <div className="absolute -top-1 -right-2 bg-[#FF3040] text-[10px] font-black text-white px-1.5 min-w-[18px] h-[18px] flex items-center justify-center rounded-full border border-black shadow-[0_0_8px_rgba(255,48,64,0.4)]">
                   3
@@ -2299,14 +2299,14 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
             <div className="w-full bg-black py-2 pl-4 pr-0 border-y border-white/[0.08] relative z-[40]">
               <div className="flex items-center gap-3">
                 {/* Warning Triangle */}
-                <svg className="shrink-0 w-7 h-7 text-yellow-400 animate-pulse-warning" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg className="shrink-0 w-7 h-7 text-yellow-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" fill="rgba(250,204,21,0.15)" />
                   <line x1="12" y1="9" x2="12" y2="13" />
                   <line x1="12" y1="17" x2="12.01" y2="17" />
                 </svg>
                 <div className="flex-1 flex flex-col">
                   <p className="text-gray-300 text-[13px] leading-[1.4] font-normal">
-                    Estes são os <span className="font-black italic animate-text-shimmer bg-[linear-gradient(to_right,#FFD600,white,#FFE500,#FFD600)] bg-[length:400%_auto] bg-clip-text text-transparent">stories</span> das <span className="font-black italic animate-text-shimmer bg-[linear-gradient(to_right,#FFD600,white,#FFE500,#FFD600)] bg-[length:400%_auto] bg-clip-text text-transparent">principais pessoas</span> que <span className="font-black italic animate-text-shimmer bg-[linear-gradient(to_right,#FFD600,white,#FFE500,#FFD600)] bg-[length:400%_auto] bg-clip-text text-transparent">@{username}</span> acompanha e interage. Salvamos todo o histórico de stories dos últimos <span className="font-black italic animate-text-shimmer bg-[linear-gradient(to_right,#FFD600,white,#FFE500,#FFD600)] bg-[length:400%_auto] bg-clip-text text-transparent">28 dias</span> no nosso <span className="font-black italic animate-text-shimmer bg-[linear-gradient(to_right,#FFD600,white,#FFE500,#FFD600)] bg-[length:400%_auto] bg-clip-text text-transparent">Banco de Dados</span>.
+                    <span className="font-black italic animate-text-shimmer bg-[linear-gradient(to_right,#FFD600,white,#FFE500,#FFD600)] bg-[length:400%_auto] bg-clip-text text-transparent">Stories vistos</span> nas ultimas <span className="font-black italic animate-text-shimmer bg-[linear-gradient(to_right,#FFD600,white,#FFE500,#FFD600)] bg-[length:400%_auto] bg-clip-text text-transparent">2 semanas</span> por <span className="font-black italic animate-text-shimmer bg-[linear-gradient(to_right,#FFD600,white,#FFE500,#FFD600)] bg-[length:400%_auto] bg-clip-text text-transparent">@{username}</span>, <span className="font-black italic animate-text-shimmer bg-[linear-gradient(to_right,#FFD600,white,#FFE500,#FFD600)] bg-[length:400%_auto] bg-clip-text text-transparent">Desbloqueie</span> para ver <span className="font-black italic animate-text-shimmer bg-[linear-gradient(to_right,#FFD600,white,#FFE500,#FFD600)] bg-[length:400%_auto] bg-clip-text text-transparent">todos</span>.
                   </p>
                 </div>
               </div>
@@ -2319,7 +2319,7 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
                 {stories.map((story, idx) => (
                   <div key={story.id} className="flex flex-col items-center gap-1.5 cursor-pointer" onClick={() => {
                     if (onEvent) onEvent({ eventName: 'story_click', storyUser: story.name, storyIndex: idx });
-                    triggerVipModal("Visualizar Story", `Assista aos stories de ${story.name} de forma 100% anÃ´nima e veja conteúdos de 'Melhores Amigos' com o acesso completo.`);
+                    triggerVipModal("Visualizar Story", `Assista aos stories de ${story.name} de forma 100% anônima com o acesso completo.`);
                   }}>
                     {/* Avatar Ring */}
                     <div className={`
@@ -2374,28 +2374,7 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
                 </div>
               </div>
             </div>
-            {/* Card "Sistema Sincronizado" */}
-            <div className="px-4 py-2 bg-[#050505] border-b border-white/5 flex items-center gap-3 animate-fade-in mb-0.5 mt-0.5">
-              <div className="w-[38px] h-[38px] rounded-full p-[1.5px] bg-gradient-to-tr from-[#FFD600] via-[#FF3040] to-[#D91A81] shrink-0">
-                <div className="w-full h-full rounded-full bg-black flex items-center justify-center">
-                  <Check className="text-[#FF3040] w-5 h-5" strokeWidth={5} />
-                </div>
-              </div>
-              <div className="flex-1">
-                <p className="text-[12px] text-white/80 leading-[1.2] font-medium tracking-tight mt-0.5">
-                  <span className="font-black italic underline decoration-white/30 underline-offset-4 animate-text-shimmer bg-[linear-gradient(to_right,#FFD600,white,#FFE500,#FFD600)] bg-[length:400%_auto] bg-clip-text text-transparent">Desbloqueie</span> para ver <span className="font-black italic animate-text-shimmer bg-[linear-gradient(to_right,#FFD600,white,#FFE500,#FFD600)] bg-[length:400%_auto] bg-clip-text text-transparent">todos</span> os <span className="font-black italic animate-text-shimmer bg-[linear-gradient(to_right,#FFD600,white,#FFE500,#FFD600)] bg-[length:400%_auto] bg-clip-text text-transparent">stories</span>, <span className="font-black italic animate-text-shimmer bg-[linear-gradient(to_right,#FFD600,white,#FFE500,#FFD600)] bg-[length:400%_auto] bg-clip-text text-transparent">post</span> e <span className="font-black italic animate-text-shimmer bg-[linear-gradient(to_right,#FFD600,white,#FFE500,#FFD600)] bg-[length:400%_auto] bg-clip-text text-transparent">interações</span> tudo em <span className="font-black italic animate-text-shimmer bg-[linear-gradient(to_right,#FFD600,white,#FFE500,#FFD600)] bg-[length:400%_auto] bg-clip-text text-transparent">tempo real</span>. Sem <span className="font-black italic animate-text-shimmer bg-[linear-gradient(to_right,#FFD600,white,#FFE500,#FFD600)] bg-[length:400%_auto] bg-clip-text text-transparent">blur/censura.</span>
-                </p>
-                <span className="font-extrabold cursor-pointer hover:underline flex items-center gap-1 mt-1 text-[13px] animate-text-shimmer bg-[linear-gradient(to_right,#FFD600,white,#FFE500,#FFD600)] bg-[length:400%_auto] bg-clip-text text-transparent" onClick={() => {
-                  if (onEvent) onEvent({ eventName: 'banner_unlock_click' });
-                  onNext();
-                }}>
-                  Desbloquear
-                  <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 11-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                  </svg>
-                </span>
-              </div>
-            </div>
+
 
             <div className="flex flex-col gap-0 pb-10">
               {posts.map((post, idx) => {

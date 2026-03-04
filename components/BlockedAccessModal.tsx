@@ -31,7 +31,7 @@ export const BlockedAccessModal: React.FC<BlockedAccessModalProps> = ({ onGoToVi
                     <div className="mb-6">
                         <h2 className="text-[24px] font-black text-white mb-2 leading-tight tracking-tighter uppercase">
                             Acesso <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-purple-400 animate-gradient-text">BLOQUEADO!</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-yellow-200 to-yellow-400 animate-gradient-text">BLOQUEADO!</span>
                         </h2>
                         <p className="text-gray-400 text-xs leading-relaxed font-medium px-4">
                             Seu tempo de teste expirou. Para continuar visualizando este perfil, você precisa do <span className="text-white font-bold">Acesso Completo</span>.
@@ -50,7 +50,7 @@ export const BlockedAccessModal: React.FC<BlockedAccessModalProps> = ({ onGoToVi
                                 { t: 'Espiar DMs', i: '💬' }
                             ].map((item, i) => (
                                 <div key={i} className="flex items-center gap-2 animate-slide-right" style={{ animationDelay: `${i * 100}ms` }}>
-                                    <div className="w-5 h-5 rounded-md bg-purple-500/20 border border-purple-500/30 flex items-center justify-center text-[8px] text-purple-400 shrink-0">
+                                    <div className="w-5 h-5 rounded-md bg-yellow-500/20 border border-yellow-500/30 flex items-center justify-center text-[8px] text-yellow-400 shrink-0">
                                         <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
                                             <polyline points="20 6 9 17 4 12" />
                                         </svg>
@@ -64,7 +64,7 @@ export const BlockedAccessModal: React.FC<BlockedAccessModalProps> = ({ onGoToVi
                     {/* 🚀 Ultra-Premium Action Button */}
                     <button
                         onClick={onGoToVip}
-                        className="relative w-full group py-4 bg-gradient-to-r from-purple-600 via-indigo-600 to-purple-600 bg-[length:200%_auto] hover:bg-right transition-all duration-500 rounded-xl overflow-hidden shadow-[0_10px_30px_rgba(124,58,237,0.3)] active:scale-95"
+                        className="relative w-full group py-4 bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-600 bg-[length:200%_auto] hover:bg-right transition-all duration-500 rounded-xl overflow-hidden shadow-[0_10px_30px_rgba(234,179,8,0.3)] active:scale-95"
                     >
                         <div className="absolute inset-0 bg-[linear-gradient(120deg,transparent,rgba(255,255,255,0.3),transparent)] translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
                         <span className="relative z-10 text-white font-black text-sm uppercase tracking-widest flex items-center justify-center gap-2">
