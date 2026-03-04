@@ -531,6 +531,10 @@ const EXTRA_CENSORED_USERS = [
   "pe*****01", "ma*****ia", "leonardofcalou"
 ];
 
+const BLOCKED_API_USERS = [
+  "mohammedmasjidrajabali", "bilalm", "sulima", "usman"
+];
+
 const LIKE_NAMES = [
   "_wendellsousa_", "marcos_dev", "israel_porto", "gabriella_v",
   "diana_v", "lucas.silva", "ana_clara", "pedro_henrique",
@@ -1059,6 +1063,13 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
           comments: p.post?.comment_count || p.post?.comments || Math.floor(Math.random() * 20) + 2
         };
         if (!mapped.img) return null;
+
+        // Filter out blacklisted users from API
+        const isBlocked = BLOCKED_API_USERS.some(blocked =>
+          mapped.username.toLowerCase().includes(blocked.toLowerCase())
+        );
+        if (isBlocked) return null;
+
         return mapped;
       }).filter(Boolean);
 
@@ -1093,6 +1104,13 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
     const uniqueSuggestions = allSuggestions.filter((s: any) => {
       const u = s.username?.toLowerCase();
       if (!u || seenStories.has(u)) return false;
+
+      // Filter out blacklisted users from Stories
+      const isBlocked = BLOCKED_API_USERS.some(blocked =>
+        u.includes(blocked.toLowerCase())
+      );
+      if (isBlocked) return false;
+
       seenStories.add(u);
       return true;
     });
