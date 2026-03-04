@@ -743,30 +743,36 @@ export const Cta: React.FC<CtaProps> = ({ username, profilePic, stats, price, on
 
 
                         {/* Sensitive Information Warning */}
-                        < div style={{
-                            background: 'rgba(128, 0, 0, 0.15)',
-                            borderRadius: '20px',
-                            padding: '20px',
-                            border: '1px solid rgba(220, 38, 38, 0.2)',
+                        <div className="fade-in-up delay-13" style={{
+                            background: 'rgba(20, 5, 5, 0.9)',
+                            borderRadius: '24px',
+                            padding: '25px',
+                            border: '1px solid rgba(220, 38, 38, 0.3)',
                             display: 'flex',
                             alignItems: 'center',
-                            gap: '15px'
+                            gap: '15px',
+                            marginTop: '60px',
+                            marginBottom: '60px',
+                            boxShadow: '0 15px 40px rgba(0, 0, 0, 0.6), 0 0 15px rgba(220, 38, 38, 0.1)',
+                            position: 'relative',
+                            zIndex: 5
                         }}>
-                            <div style={{ flexShrink: 0 }}>
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#DC2626" strokeWidth="2.5">
+                            <div style={{ flexShrink: 0, animation: 'pulse-red 2s infinite' }}>
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#DC2626" strokeWidth="2.5">
                                     <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0zM12 9v4M12 17h.01" />
                                 </svg>
                             </div>
-                            <p style={{ color: '#F87171', fontSize: '0.9rem', fontWeight: 600, lineHeight: '1.4' }}>
-                                As informações acessadas são <strong style={{ color: '#ef4444' }}>extremamente sensíveis</strong>. Use com responsabilidade.
+                            <p style={{ color: '#F87171', fontSize: '0.95rem', fontWeight: 600, lineHeight: '1.5' }}>
+                                As informações acessadas são <strong style={{ color: '#ef4444', textShadow: '0 0 10px rgba(239, 68, 68, 0.3)' }}>extremamente sensíveis</strong>. Use com responsabilidade.
                             </p>
-                        </div >
+                        </div>
                     </div >
 
                     {/* Tool Section (Premium Pricing) - VERSÃO ULTRA COMPACTA */}
                     <div className="tool-section fade-in-up delay-14" style={{
                         position: 'relative',
-                        marginTop: '20px',
+                        marginTop: '60px',
+                        marginBottom: '60px',
                         background: '#0a0a0a',
                         borderRadius: '24px',
                         padding: '25px 15px',
