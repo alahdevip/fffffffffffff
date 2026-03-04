@@ -1888,12 +1888,17 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
           {/* Follow Requests Section */}
           <div className="flex items-center justify-between py-4 mb-2 cursor-pointer active:bg-white/5 relative z-0" onClick={() => triggerVipModal("Solicitações de Seguir", "Veja quem quer seguir você com o acesso completo.")}>
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full overflow-hidden bg-gray-800 border border-white/10">
-                <img
-                  src={followRequests.img1}
-                  className="w-full h-full object-cover blur-[2px] scale-110"
-                  alt=""
-                />
+              <div className="relative">
+                <div className="w-12 h-12 rounded-full overflow-hidden bg-gray-800 border border-white/10">
+                  <img
+                    src={followRequests.img1}
+                    className="w-full h-full object-cover blur-[2px] scale-110"
+                    alt=""
+                  />
+                </div>
+                <div className="absolute -top-1 -right-1 bg-[#FF3040] text-[10px] font-black text-white w-[19px] h-[19px] flex items-center justify-center rounded-full border-2 border-black shadow-[0_0_8px_rgba(255,48,64,0.4)]">
+                  7
+                </div>
               </div>
               <div className="flex flex-col">
                 <span className="text-white font-semibold text-[15px]">Solicitações para seguir</span>
