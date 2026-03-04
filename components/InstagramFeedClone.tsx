@@ -1982,11 +1982,11 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
                         <div className="flex-1 min-w-0">
                           <p className="text-[14px] leading-snug">
                             {/* Display pre-masked user directly */}
-                            <span className="text-white font-semibold">@{maskNamePercent(notif.user, 40)}</span>
+                            <span className="text-white font-semibold filter blur-[3.5px] select-none">@{maskNamePercent(notif.user, 40)}</span>
                             {notif.extra && (
                               <>
                                 <span className="text-white"> e </span>
-                                <span className="text-white font-semibold">@{maskNamePercent(notif.extra, 40)}</span>
+                                <span className="text-white font-semibold filter blur-[3.5px] select-none">@{maskNamePercent(notif.extra, 40)}</span>
                               </>
                             )}
                             {notif.extraCount && <span className="text-white"> {notif.extraCount}</span>}
