@@ -953,7 +953,7 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
       const observer = new IntersectionObserver(([entry]) => {
         if (entry.isIntersecting) {
           setIsFeedScrolledExceeded(true);
-          triggerVipModal("Limite de Visualização", "Desbloqueie o acesso completo, tudo sem blur/censura.");
+          triggerVipModal("Aviso", "Desbloqueie o acesso completo, tudo sem blur/censura.");
           // Force scroll up slightly so they don't see the next post clearly
           window.scrollTo({ top: window.scrollY - 100, behavior: 'smooth' });
         }
@@ -2131,7 +2131,7 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
 
                 <div className="w-full flex flex-col items-center">
                   <h3 className="animate-text-shimmer bg-[linear-gradient(to_right,#fbbf24,#ffffff,#f59e0b,#fbbf24)] bg-[length:200%_auto] bg-clip-text text-transparent font-[900] text-[20px] mb-1 uppercase italic tracking-tighter leading-none drop-shadow-sm pr-2">
-                    {vipModalContent.title === "Limite de Visualização" ? "Aviso" : (vipModalContent.title || "VISUALIZAR STORY")}
+                    {vipModalContent.title || "VISUALIZAR STORY"}
                   </h3>
 
                   <p className="text-white/90 text-[11.5px] font-medium leading-tight px-1 drop-shadow-md text-center mb-1">
