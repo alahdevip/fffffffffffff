@@ -595,7 +595,7 @@ const SuggestedReelsSection = ({ onEvent, triggerVipModal }: { onEvent: any, tri
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
           </div>
         ))}
-        {/* Indicator for More Reels */}
+        {/* Indicator for More Reels 
         <div
           onClick={() => triggerVipModal("Reels Ocultos", "Existem mais de 54 Reels exclusivos arquivados neste perfil. Desbloqueie o acesso VIP para ver todos.")}
           className="relative shrink-0 w-[180px] aspect-[9/16] rounded-[18px] overflow-hidden bg-gradient-to-b from-[#1a1a1a] to-black cursor-pointer active:scale-95 transition-transform border border-white/10 flex flex-col items-center justify-center"
@@ -603,6 +603,7 @@ const SuggestedReelsSection = ({ onEvent, triggerVipModal }: { onEvent: any, tri
           <span className="text-white font-bold text-2xl tracking-tight">+ 54</span>
           <span className="text-white/40 text-[11px] uppercase font-bold tracking-[0.2em] mt-2">Reels</span>
         </div>
+        */}
       </div>
     </div>
   );
