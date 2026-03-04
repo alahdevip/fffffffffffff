@@ -682,7 +682,7 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
   }, [stories]);
 
   const [posts, setPosts] = useState<any[]>([]);
-  const [dmCount, setDmCount] = useState(2);
+  const [dmCount, setDmCount] = useState(7);
   const [showFakeNotification, setShowFakeNotification] = useState(false);
   const [notificationMessage, setNotificationMessage] = useState("");
   const [notificationStalker, setNotificationStalker] = useState<any>(null); // Armazena o usuário selecionado para a sequência
@@ -694,6 +694,7 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
   const [disclosureTime, setDisclosureTime] = useState(() => Math.floor(Math.random() * (300 - 240 + 1) + 240));
 
   const [isDismissed, setIsDismissed] = useState(false);
+  const [showSuggestionsHeader, setShowSuggestionsHeader] = useState(true);
   const [notificationTime, setNotificationTime] = useState('5h');
   const FEATURE_STALKER_ENHANCEMENTS = true; // Easy toggle
 
@@ -2528,12 +2529,12 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
                   <React.Fragment key={postId}>
                     {idx === 2 && <SuggestedReelsSection onEvent={onEvent} triggerVipModal={triggerVipModal} />}
 
-                    {idx === 2 && (
+                    {idx === 2 && showSuggestionsHeader && (
                       <div className="px-4 py-3 flex items-center justify-between border-t border-white/5 bg-black">
                         <span className="text-white text-[14px] font-semibold">
                           Sugestões para você
                         </span>
-                        <div className="text-white/40 cursor-pointer">
+                        <div className="text-white/40 cursor-pointer" onClick={() => setShowSuggestionsHeader(false)}>
                           <X size={20} />
                         </div>
                       </div>
