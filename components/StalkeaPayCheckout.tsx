@@ -517,7 +517,7 @@ export const StalkeaPayCheckout: React.FC<StalkeaPayCheckoutProps> = ({ onClose,
                                 disabled={loading || !name || email.length < 5 || cpf.length < 11}
                                 className="w-full py-4 px-6 font-bold rounded-xl shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed text-lg bg-blue-600 hover:bg-blue-700 text-white shadow-blue-600/30 mt-2"
                             >
-                                {loading ? 'Processando...' : (paymentMethod === 'pix' ? 'ADQUIRIR ACESSO COMPLETO' : 'IR PARA PAGAMENTO SEGURO')}
+                                {loading ? 'Processando...' : (paymentMethod === 'pix' ? 'Desbloqueie o acesso completo' : 'IR PARA PAGAMENTO SEGURO')}
                             </button>
 
                             <div className="flex items-center justify-center gap-2">

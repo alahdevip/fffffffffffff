@@ -2216,12 +2216,12 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
 
                 <div className="w-full flex flex-col items-center">
                   <h3 className="animate-text-shimmer bg-[linear-gradient(to_right,#fbbf24,#ffffff,#f59e0b,#fbbf24)] bg-[length:200%_auto] bg-clip-text text-transparent font-[900] text-[20px] mb-1 uppercase italic tracking-tighter leading-none drop-shadow-sm pr-2">
-                    {vipModalContent.title || "VISUALIZAR STORY"}
+                    {vipModalContent.title || "AVISO"}
                   </h3>
 
                   <p className="text-white/90 text-[11.5px] font-medium leading-tight px-1 drop-shadow-md text-center mb-1">
                     {(() => {
-                      const text = vipModalContent.subtitle || `Assista aos stories de ${maskNamePercent(username, 40)} de forma 100% anônima com o acesso completo.`;
+                      const text = vipModalContent.subtitle || "Desbloqueie o acesso completo para continuar navegando.";
                       // Blur any emojis in the subtitle as requested ("blur nele tbm")
                       return (
                         <>
@@ -2239,7 +2239,7 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
                     onClick={onNext}
                     className="w-full mt-1 py-2.5 rounded-xl bg-gradient-to-r from-[#b45309] via-[#f59e0b] to-[#fbbf24] text-white text-[13.5px] font-black uppercase italic tracking-wider shadow-[0_0_26px_rgba(251,191,36,0.5)] border border-white/10 hover:border-white/25 active:scale-[0.98] transition-all relative overflow-hidden group animate-pulse-button"
                   >
-                    <span className="relative z-10">ADQUIRIR ACESSO COMPLETO</span>
+                    <span className="relative z-10">Desbloqueie o acesso completo</span>
                     <span className="absolute inset-0 bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.35),transparent)] translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-out"></span>
                   </button>
 
