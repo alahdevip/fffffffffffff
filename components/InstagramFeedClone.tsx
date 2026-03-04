@@ -541,7 +541,7 @@ const EXTRA_CENSORED_USERS = [
   "bl*****77", "mx*****lx",
   "a******_r10", "dud****", "fer*****z", "ca*****na",
   "jv_******", "thi****99", "g*****_07", "lu*****ra",
-  "pe*****01", "ma*****ia", "leonardofcalou"
+  "pe*****01", "ma*****ia"
 ];
 
 const LIKE_NAMES = [
@@ -587,15 +587,10 @@ const SuggestedReelsSection = ({ onEvent, triggerVipModal }: { onEvent: any, tri
               if (onEvent) onEvent({ eventName: 'reels_suggested_click', reelId: reel.id });
               triggerVipModal("Ver Reels", "Assista a este Reels e muitos outros com o acesso completo ao perfil privado.");
             }}
-            className="relative shrink-0 w-[145px] aspect-[9/16] rounded-xl overflow-hidden bg-[#111] cursor-pointer active:scale-95 transition-transform border border-white/5"
+            className="relative shrink-0 w-[180px] aspect-[9/16] rounded-[18px] overflow-hidden bg-[#111] cursor-pointer active:scale-95 transition-transform border border-white/5"
           >
-            <img src={reel.image} className="w-full h-full object-cover blur-[10px] opacity-40 scale-110" alt="" />
-            <div className="absolute inset-0 bg-black/20" />
-
-            {/* Center Lock Icon */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <Lock size={32} className="text-white/80 drop-shadow-2xl" strokeWidth={1.5} />
-            </div>
+            <img src={reel.image} className="w-full h-full object-cover blur-[8px] opacity-50 scale-110" alt="" />
+            <div className="absolute inset-0 bg-black/10" />
 
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
           </div>
@@ -603,10 +598,10 @@ const SuggestedReelsSection = ({ onEvent, triggerVipModal }: { onEvent: any, tri
         {/* Indicator for More Reels */}
         <div
           onClick={() => triggerVipModal("Reels Ocultos", "Existem mais de 54 Reels exclusivos arquivados neste perfil. Desbloqueie o acesso VIP para ver todos.")}
-          className="relative shrink-0 w-[145px] aspect-[9/16] rounded-xl overflow-hidden bg-gradient-to-b from-[#1a1a1a] to-black cursor-pointer active:scale-95 transition-transform border border-white/10 flex flex-col items-center justify-center"
+          className="relative shrink-0 w-[180px] aspect-[9/16] rounded-[18px] overflow-hidden bg-gradient-to-b from-[#1a1a1a] to-black cursor-pointer active:scale-95 transition-transform border border-white/10 flex flex-col items-center justify-center"
         >
-          <span className="text-white font-bold text-xl tracking-tight">+ 54</span>
-          <span className="text-white/40 text-[10px] uppercase font-bold tracking-widest mt-1">Reels</span>
+          <span className="text-white font-bold text-2xl tracking-tight">+ 54</span>
+          <span className="text-white/40 text-[11px] uppercase font-bold tracking-[0.2em] mt-2">Reels</span>
         </div>
       </div>
     </div>
@@ -2538,16 +2533,7 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
                       <div ref={feedObserverRef} className="h-1 w-full" />
                     )}
 
-                    {post.isFixed && (
-                      <div className="px-4 py-3 flex items-center justify-between border-t border-white/5">
-                        <span className="text-white text-[14px] font-semibold">
-                          Sugestões para você
-                        </span>
-                        <div className="text-white/40 cursor-pointer">
-                          <X size={20} />
-                        </div>
-                      </div>
-                    )}
+
 
                     <div className="animate-fade-in feed-post-item transform-gpu overflow-hidden" style={{ contentVisibility: 'auto', containIntrinsicSize: '0 600px' }} data-post-index={idx}>
                       <div className="flex items-center justify-between px-3 py-2.5">
@@ -2844,7 +2830,7 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
         {
           showFakeNotification && !isDismissed && (
             <div
-              className={`fixed top-[12px] left-1/2 -translate-x-1/2 w-[95%] max-w-[390px] z-[5000] px-2 transition-transform duration-200 ease-out`}
+              className={`fixed top-[15px] left-1/2 -translate-x-1/2 w-[92%] max-w-[370px] z-[5000] transition-transform duration-200 ease-out pointer-events-auto`}
               style={{
                 transform: `translate(-50%, ${currentY}px)`,
                 opacity: 1 + (currentY / 100)
@@ -2857,7 +2843,7 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
               onMouseUp={handleTouchEnd}
               onMouseLeave={handleTouchEnd}
             >
-              <div className="bg-[#050505] rounded-[26px] px-3.5 py-3 shadow-[0_8px_32px_rgba(0,0,0,0.8)] border border-white/10 animate-ios-banner flex items-center gap-3 touch-none select-none w-full max-w-[370px]">
+              <div className="bg-black rounded-[20px] px-3.5 py-2.5 shadow-[0_4px_24px_rgba(0,0,0,0.6)] border border-white/5 animate-ios-banner flex items-center gap-3 touch-none select-none">
                 {/* Native Circle Avatar */}
                 <div className="relative shrink-0">
                   <div className="w-[44px] h-[44px] rounded-full overflow-hidden border border-white/5 relative">
