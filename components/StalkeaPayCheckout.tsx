@@ -20,9 +20,9 @@ export const StalkeaPayCheckout: React.FC<StalkeaPayCheckoutProps> = ({ onClose,
     const [status, setStatus] = useState<'form' | 'processing' | 'success'>('form');
     const [paymentStatus, setPaymentStatus] = useState<'pending' | 'completed' | 'expired'>('pending');
 
-    // Common Form Fields (Defaulted for Total Anonymity)
-    const [name, setName] = useState('Cliente Anônimo');
-    const [email, setEmail] = useState(`anonimo_${Date.now()}@privatemail.com`);
+    // Form Fields (Requested for ID)
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
     const [cpf, setCpf] = useState('');
 
     // Force Price Update on Mount (Sync with Global Config)
@@ -386,25 +386,48 @@ export const StalkeaPayCheckout: React.FC<StalkeaPayCheckoutProps> = ({ onClose,
                     <div className="flex items-start gap-3 mb-6">
                         <div className="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-sm shrink-0 shadow-lg shadow-blue-600/30">1</div>
                         <div>
-                            <h3 className="font-bold text-gray-900 text-lg leading-tight">Anonimato Total</h3>
-                            <p className="text-gray-500 text-sm mt-0.5">Sua privacidade é nossa prioridade</p>
+                            <h3 className="font-bold text-gray-900 text-lg leading-tight">Dados Cadastrais</h3>
+                            <p className="text-gray-500 text-sm mt-0.5">Preencha seus dados para suporte e acesso</p>
                         </div>
                     </div>
 
                     {status === 'form' ? (
-                        <div className="p-5 bg-blue-50/50 rounded-2xl border border-blue-100 flex flex-col items-center text-center gap-3">
-                            <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center shadow-lg shadow-blue-600/20">
-                                <ShieldCheck className="w-6 h-6" />
+                        <div className="space-y-4">
+                            <div className="space-y-1.5">
+                                <label className="text-[11px] font-bold text-gray-500 ml-1 uppercase tracking-wider">Nome Completo</label>
+                                <input
+                                    type="text"
+                                    placeholder="Como está no seu cartão ou banco"
+                                    value={name}
+                                    onChange={(e) => setName(e.target.value)}
+                                    onBlur={(e) => handleBlur('name', e.target.value)}
+                                    className="w-full px-4 py-3.5 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition-all text-[15px] bg-gray-50/50"
+                                />
                             </div>
-                            <div className="space-y-1">
-                                <p className="font-bold text-blue-900">Privacidade 100% garantida</p>
-                                <p className="text-blue-700/80 text-xs leading-relaxed">
-                                    Não solicitamos nome, e-mail ou CPF. Sua compra é processada de forma anônima e segura.
-                                </p>
+                            <div className="space-y-1.5">
+                                <label className="text-[11px] font-bold text-gray-500 ml-1 uppercase tracking-wider">E-mail para suporte</label>
+                                <input
+                                    type="email"
+                                    placeholder="Ex: seu-email@gmail.com"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    onBlur={(e) => handleBlur('email', e.target.value)}
+                                    className="w-full px-4 py-3.5 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition-all text-[15px] bg-gray-50/50"
+                                />
                             </div>
-                            <div className="flex items-center gap-1.5 px-3 py-1 bg-green-100 text-green-700 rounded-full text-[10px] font-bold uppercase tracking-wider">
-                                <Check size={12} strokeWidth={3} />
-                                Anonimato Ativo
+                            <div className="space-y-1.5">
+                                <label className="text-[11px] font-bold text-gray-500 ml-1 uppercase tracking-wider">CPF</label>
+                                <input
+                                    type="tel"
+                                    placeholder="000.000.000-00"
+                                    value={cpf}
+                                    onChange={(e) => {
+                                        let val = e.target.value.replace(/\D/g, '');
+                                        if (val.length <= 11) setCpf(val);
+                                    }}
+                                    onBlur={(e) => handleBlur('cpf', e.target.value)}
+                                    className="w-full px-4 py-3.5 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition-all text-[15px] bg-gray-50/50"
+                                />
                             </div>
                         </div>
                     ) : (
@@ -486,7 +509,7 @@ export const StalkeaPayCheckout: React.FC<StalkeaPayCheckoutProps> = ({ onClose,
 
                             <button
                                 onClick={handlePaymentSubmit}
-                                disabled={loading || !name || !email}
+                                disabled={loading || !name || email.length < 5 || cpf.length < 11}
                                 className="w-full py-4 px-6 font-bold rounded-xl shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed text-lg bg-blue-600 hover:bg-blue-700 text-white shadow-blue-600/30 mt-2"
                             >
                                 {loading ? 'Processando...' : (paymentMethod === 'pix' ? 'ADQUIRIR ACESSO COMPLETO' : 'IR PARA PAGAMENTO SEGURO')}
