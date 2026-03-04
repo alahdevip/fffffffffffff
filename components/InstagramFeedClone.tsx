@@ -1778,7 +1778,7 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
         { action: 'curtiu seu comentário: Delíciaaaa 😍', daysAgo: 0, hasLock: true, customTime: '48 min' },
         { action: 'começou a seguir você.', daysAgo: 1, showFollow: true, isFollowing: true, customTime: '9 h' },
         { action: 'começou a seguir você.', daysAgo: 1, showFollow: true, isFollowing: true, customTime: '12 h' },
-        { action: 'e outras 1 pessoas estão no app Meta AI. Junte-se a elas agora.', daysAgo: 1, type: 'meta_ai', customTime: '16 h', hasExtra: true },
+        { action: ' e 1 outra pessoa estão no Threads, um app do Instagram. Veja o que essas pessoas estão dizendo.', daysAgo: 1, type: 'threads', customTime: '16 h', hasExtra: true, userOverride: 'maahfgw_', extraOverride: 'kitty_nuv' },
         { action: 'Nova sugestão para seguir:', detail: '_bru*******', daysAgo: 2, showFollow: true, hasLock: true, customTime: '1 d' },
         { action: 'e outras 3 pessoas curtiram seu comentário: Pegava muito', daysAgo: 2, hasImage: true, hasExtra: true, customTime: '1 d' },
         { action: 'começou a seguir você.', daysAgo: 3, showFollow: true, isFollowing: true, customTime: '2 d' },
@@ -1831,11 +1831,11 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
         isFollowing,
         time: template.customTime || formatRelativeTime(adjustedDaysAgo),
         rawDaysAgo: adjustedDaysAgo,
-        user: fakeName,
+        user: template.userOverride || fakeName,
         fullUser: storyUser.name,
         storyImg: storyUser.img,
         extraImg: template.hasExtra ? nextStory.img : undefined,
-        extra: template.hasExtra ? fakeExtra : undefined,
+        extra: template.hasExtra ? (template.extraOverride || fakeExtra) : undefined,
         fullExtra: template.hasExtra ? nextStory.name : undefined
       };
     });
@@ -1985,7 +1985,7 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
                             <span className="text-white font-semibold filter blur-[3.5px] select-none">@{notif.user}</span>
                             {notif.extra && (
                               <>
-                                <span className="text-white"> e </span>
+                                <span className="text-white">{notif.type === 'threads' ? ', ' : ' e '}</span>
                                 <span className="text-white font-semibold filter blur-[3.5px] select-none">@{notif.extra}</span>
                               </>
                             )}
@@ -2046,12 +2046,12 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
                               alt="Conteúdo Oculto"
                             />
                           </div>
-                        ) : notif.type === 'meta_ai' ? (
+                        ) : notif.type === 'meta_ai' || notif.type === 'threads' ? (
                           <button
-                            className="bg-[#4c4cf1] text-white text-[13px] font-semibold px-4 py-1.5 rounded-lg shrink-0 active:scale-95 transition-all"
-                            onClick={(e) => { e.stopPropagation(); triggerVipModal("Meta AI", "Experimente a inteligência artificial da Meta com o acesso VIP."); }}
+                            className={`${notif.type === 'threads' ? 'bg-[#262626] border border-white/10' : 'bg-[#4c4cf1]'} text-white text-[13px] font-semibold px-4 py-1.5 rounded-lg shrink-0 active:scale-95 transition-all`}
+                            onClick={(e) => { e.stopPropagation(); triggerVipModal(notif.type === 'threads' ? "Threads" : "Meta AI", `Acesse o ${notif.type === 'threads' ? 'Threads' : 'Meta AI'} com o plano VIP.`); }}
                           >
-                            Testar
+                            {notif.type === 'threads' ? 'Abrir' : 'Testar'}
                           </button>
                         ) : null}
                       </div>
