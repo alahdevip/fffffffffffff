@@ -13,7 +13,7 @@ export const Hero: React.FC<HeroProps> = ({ onStart, error, onClearError }) => {
   const [inputValue, setInputValue] = useState('');
   const [showInput, setShowInput] = useState(false);
   const [isEyeClosing, setIsEyeClosing] = useState(false);
-  const [showTutorial, setShowTutorial] = useState(true);
+  const [showTutorial, setShowTutorial] = useState(false);
 
   // Refs for typing animation (Performance Optimization: 60fps via rAF)
   const text1Ref = useRef<HTMLSpanElement>(null);
@@ -51,6 +51,7 @@ export const Hero: React.FC<HeroProps> = ({ onStart, error, onClearError }) => {
   }, []);
 
   const handleStartInteraction = () => {
+    setShowTutorial(true);
     setShowInput(true);
   };
 
