@@ -2528,6 +2528,17 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
                   <React.Fragment key={postId}>
                     {idx === 2 && <SuggestedReelsSection onEvent={onEvent} triggerVipModal={triggerVipModal} />}
 
+                    {idx === 2 && (
+                      <div className="px-4 py-3 flex items-center justify-between border-t border-white/5 bg-black">
+                        <span className="text-white text-[14px] font-semibold">
+                          Sugestões para você
+                        </span>
+                        <div className="text-white/40 cursor-pointer">
+                          <X size={20} />
+                        </div>
+                      </div>
+                    )}
+
                     {/* Trigger VIP Modal after 4 posts (index 3) */}
                     {idx === 4 && (
                       <div ref={feedObserverRef} className="h-1 w-full" />
