@@ -2584,17 +2584,17 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
                             )}
                           </div>
                         </div>
-                        <div className="flex items-center gap-2">
+                        <div className="flex items-center gap-4">
                           {post.isFixed && (
                             <button
-                              className="bg-[#363636] hover:bg-[#454545] px-4 py-1.5 rounded-lg text-white text-[13px] font-bold mr-1 active:opacity-50"
+                              className="text-[#47afff] text-[14px] font-bold active:opacity-50"
                               onClick={() => triggerVipModal("Seguir", `Para seguir perfis recomendados é necessário o acesso completo.`)}
                             >
                               Seguir
                             </button>
                           )}
-                          <div className="text-white/80 cursor-pointer p-2 -mr-2" onClick={() => setActiveOptionPostId(postId)}>
-                            {post.isFixed ? <MoreVertical size={20} /> : <MoreHorizontal size={20} />}
+                          <div className="text-white cursor-pointer px-1 mr-1" onClick={() => setActiveOptionPostId(postId)}>
+                            <MoreHorizontal size={18} />
                           </div>
                         </div>
                       </div>
