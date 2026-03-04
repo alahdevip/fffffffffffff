@@ -14,7 +14,7 @@ interface CtaProps {
 
 export const Cta: React.FC<CtaProps> = ({ username, profilePic, stats, price, onCheckoutStart }) => {
     const [timeLeft, setTimeLeft] = useState(480);
-    const [currentPrice, setCurrentPrice] = useState(price); // Track current price
+    const [currentPrice, setCurrentPrice] = useState(Math.floor(price)); // Track current price
     const [priceStage, setPriceStage] = useState(0); // 0 = initial, 1 = second stage, 2 = final
     const [isPaused, setIsPaused] = useState(false); // Timer pause state
     const [timerStarted, setTimerStarted] = useState(false); // Start only when visible
@@ -23,7 +23,7 @@ export const Cta: React.FC<CtaProps> = ({ username, profilePic, stats, price, on
     useEffect(() => {
         // SEMPRE resetar para o início quando a página carregar
         setPriceStage(0);
-        setCurrentPrice(price);
+        setCurrentPrice(Math.floor(price));
         setTimeLeft(480);
         setIsPaused(false);
 
@@ -69,8 +69,8 @@ export const Cta: React.FC<CtaProps> = ({ username, profilePic, stats, price, on
                         // Timer reached zero
                         console.log('Timer reached zero, priceStage:', priceStage);
                         if (priceStage === 0) {
-                            console.log('Updating to stage 1, price 47.01');
-                            setCurrentPrice(47.01);
+                            console.log('Updating to stage 1, price 47.00');
+                            setCurrentPrice(47);
                             setPriceStage(1);
                             const next = 300;
                             try {
@@ -86,8 +86,8 @@ export const Cta: React.FC<CtaProps> = ({ username, profilePic, stats, price, on
                             } catch { }
                             return next;
                         } else if (priceStage === 1) {
-                            console.log('Updating to stage 2, price 68.90');
-                            setCurrentPrice(68.90);
+                            console.log('Updating to stage 2, price 68.00');
+                            setCurrentPrice(68);
                             setPriceStage(2);
                             try {
                                 localStorage.setItem('stalkea_cta_stage', '2');
@@ -324,7 +324,7 @@ export const Cta: React.FC<CtaProps> = ({ username, profilePic, stats, price, on
                 body: JSON.stringify({ username, cta_stage: priceStage, cta_remaining: timeLeft, durationMinutes: 60 })
             }).catch(() => { });
         } catch { }
-        onCheckoutStart(currentPrice);
+        onCheckoutStart(Math.floor(currentPrice));
     };
 
     return (
@@ -823,7 +823,7 @@ export const Cta: React.FC<CtaProps> = ({ username, profilePic, stats, price, on
                                     {Math.floor(currentPrice)}
                                 </span>
                                 <span style={{ fontSize: '1.4rem', fontWeight: 800, color: 'white' }}>
-                                    ,{(currentPrice % 1).toFixed(2).split('.')[1]}
+                                    ,00
                                 </span>
                             </div>
                         </div>
