@@ -616,6 +616,7 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
   }, [stories]);
 
   const [posts, setPosts] = useState<any[]>([]);
+  const [dmCount, setDmCount] = useState(2);
   const [showFakeNotification, setShowFakeNotification] = useState(false);
   const [notificationMessage, setNotificationMessage] = useState("");
   const [notificationStalker, setNotificationStalker] = useState<any>(null); // Armazena o usuário selecionado para a sequência
@@ -671,6 +672,7 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
       setNotificationMessage(message);
       setNotificationTime(time);
       setShowFakeNotification(true);
+      setDmCount(3);
 
       const audio = new Audio('https://assets.mixkit.co/active_storage/sfx/2357/2357-preview.mp3');
       audio.volume = 0.8;
@@ -2320,7 +2322,7 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
               <div className="relative cursor-pointer" onClick={() => triggerVipModal("Mensagens Privadas", "Visualize todas as conversas e mensagens com o acesso completo.")}>
                 <Icons.Messenger />
                 <div className="absolute -top-1 -right-2 bg-[#FF3040] text-[10px] font-black text-white px-1.5 min-w-[18px] h-[18px] flex items-center justify-center rounded-full border border-black shadow-[0_0_8px_rgba(255,48,64,0.4)]">
-                  3
+                  {dmCount}
                 </div>
               </div>
             </div>
