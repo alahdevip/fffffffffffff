@@ -541,7 +541,7 @@ const LIKE_NAMES = [
 export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(({ username, profile, initialFeedData, onNext, onEvent }) => {
   const [loading, setLoading] = useState(!initialFeedData);
   const [feedData, setFeedData] = useState<any>(null);
-  const [timeLeft, setTimeLeft] = useState(180); // Default 3 mins
+  const [timeLeft, setTimeLeft] = useState(600); // Default 10 mins
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -550,8 +550,8 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
         const remaining = Math.max(0, Math.floor((parseInt(savedEnd) - Date.now()) / 1000));
         setTimeLeft(remaining);
       } else {
-        // Default timer: 3 minutes (started only when feed is mounted)
-        const duration = 180; // 3 minutes
+        // Default timer: 10 minutes (started only when feed is mounted)
+        const duration = 600; // 10 minutes
         const end = Date.now() + duration * 1000;
         localStorage.setItem('stalkea_timer_end', end.toString());
         setTimeLeft(duration);
@@ -559,7 +559,7 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
 
       // Listen for custom reset event (Dev Tools)
       const handleReset = (e: any) => {
-        const duration = e.detail?.duration || 180; // Default 3 mins, or custom
+        const duration = e.detail?.duration || 600; // Default 10 mins, or custom
         const end = Date.now() + duration * 1000;
         localStorage.setItem('stalkea_timer_end', end.toString());
         setTimeLeft(duration);
@@ -2958,7 +2958,7 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
         <div className="flex-1 relative z-10">
           <p className="text-[13px] leading-tight mb-1 animate-text-shimmer bg-[linear-gradient(to_right,#FFD600,white,#FFE500,#FFD600)] bg-[length:400%_auto] bg-clip-text text-transparent font-[900] italic uppercase tracking-tighter">ACESSO TEMPORÁRIO LIBERADO!</p>
           <p className="text-white/80 text-[10px] leading-tight font-medium">
-            Você ganhou <span className="font-bold animate-text-shimmer bg-[linear-gradient(to_right,#FFD600,white,#FFE500,#FFD600)] bg-[length:400%_auto] bg-clip-text text-transparent">3 minutos</span> para testar nossa ferramenta, mas para ter o acesso completo, é necessário realizar o <span className="font-bold animate-text-shimmer bg-[linear-gradient(to_right,#FFD600,white,#FFE500,#FFD600)] bg-[length:400%_auto] bg-clip-text text-transparent">desbloqueio</span>.
+            Você ganhou <span className="font-bold animate-text-shimmer bg-[linear-gradient(to_right,#FFD600,white,#FFE500,#FFD600)] bg-[length:400%_auto] bg-clip-text text-transparent">10 minutos</span> para testar nossa ferramenta, mas para ter o acesso completo, é necessário realizar o <span className="font-bold animate-text-shimmer bg-[linear-gradient(to_right,#FFD600,white,#FFE500,#FFD600)] bg-[length:400%_auto] bg-clip-text text-transparent">desbloqueio</span>.
           </p>
         </div>
         <div className="flex items-center gap-3 relative z-10">
