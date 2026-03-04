@@ -4,11 +4,11 @@ import { Logger } from '../src/utils/logger';
 import {
   Lock,
   ShieldAlert,
-  Users,
   Activity,
   ShieldCheck,
   LockIcon,
   ChevronRight,
+  ChevronDown,
   Key,
   Check,
   Heart,
@@ -16,7 +16,8 @@ import {
   MoreHorizontal,
   ExternalLink,
   X,
-  Star
+  Star,
+  Users
 } from 'lucide-react';
 
 // Official Instagram Icons
@@ -743,6 +744,7 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
   const [showVipModal, setShowVipModal] = useState(false);
   const [vipModalContent, setVipModalContent] = useState({ title: '', subtitle: '' });
   const [activeOptionPostId, setActiveOptionPostId] = useState<string | null>(null);
+  const [isAccountMenuOpen, setIsAccountMenuOpen] = useState(false);
 
   const [isBannerAnimating, setIsBannerAnimating] = useState(false);
 
@@ -2284,12 +2286,47 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
               {currentTab === 'reels' ? (
                 <span className="font-bold text-xl text-white drop-shadow-md">Reels</span>
               ) : (
-                <img
-                  src="/instagram-logo.svg"
-                  className="h-8 invert object-contain active:scale-95 transition-all"
-                  alt="Instagram"
-                  onClick={() => window.location.reload()}
-                />
+                <div className="relative">
+                  <div
+                    className="flex items-center gap-1 cursor-pointer active:opacity-60 transition-all select-none"
+                    onClick={() => setIsAccountMenuOpen(!isAccountMenuOpen)}
+                  >
+                    <img
+                      src="/instagram-logo.svg"
+                      className="h-8 invert object-contain"
+                      alt="Instagram"
+                    />
+                    <ChevronDown size={18} className={`transition-transform duration-200 ${isAccountMenuOpen ? 'rotate-180' : ''}`} />
+                  </div>
+
+                  {isAccountMenuOpen && (
+                    <>
+                      <div className="fixed inset-0 z-[100]" onClick={() => setIsAccountMenuOpen(false)} />
+                      <div className="absolute top-10 left-0 bg-[#262626] rounded-xl shadow-[0_8px_24px_rgba(0,0,0,0.5)] border border-white/10 min-w-[200px] z-[110] animate-in fade-in slide-in-from-top-2 duration-200 overflow-hidden py-1">
+                        <button
+                          onClick={() => {
+                            setIsAccountMenuOpen(false);
+                            triggerVipModal("Seguindo", "Veja posts apenas de quem você segue com o acesso completo.");
+                          }}
+                          className="w-full flex items-center justify-between px-4 py-3 text-white hover:bg-white/5 active:bg-white/10 transition-colors"
+                        >
+                          <span className="text-[16px] font-normal">Seguindo</span>
+                          <Users size={20} className="opacity-80" />
+                        </button>
+                        <button
+                          onClick={() => {
+                            setIsAccountMenuOpen(false);
+                            triggerVipModal("Favoritos", "Gerencie seus perfis favoritos com o acesso completo.");
+                          }}
+                          className="w-full flex items-center justify-between px-4 py-3 text-white hover:bg-white/5 active:bg-white/10 transition-colors"
+                        >
+                          <span className="text-[16px] font-normal">Favoritos</span>
+                          <Star size={20} className="opacity-80" />
+                        </button>
+                      </div>
+                    </>
+                  )}
+                </div>
               )}
             </div>
             <div className="flex items-center gap-5">
