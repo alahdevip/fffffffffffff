@@ -8,9 +8,9 @@
       "upsell2": false
     },
     "checkout": {},
-    "step": "feed",
+    "step": "cta",
     "target": "eu.wlysilva",
-    "lastSeen": "2026-03-04T07:31:40.265Z",
+    "lastSeen": "2026-03-04T07:51:09.737Z",
     "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36"
   },
   {

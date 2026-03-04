@@ -1773,7 +1773,7 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
 
       // Copy exata da screenshot do usuário
       const screenshotTemplates = [
-        { action: 'curtiu seu comentário: Delíciaaaa 😍😍😍', daysAgo: 0, hasLock: true, customTime: '48 min' },
+        { action: 'curtiu seu comentário: Delíciaaaa 😍', daysAgo: 0, hasLock: true, customTime: '48 min' },
         { action: 'começou a seguir você.', daysAgo: 1, showFollow: true, isFollowing: true, customTime: '9 h' },
         { action: 'começou a seguir você.', daysAgo: 1, showFollow: true, isFollowing: true, customTime: '12 h' },
         { action: 'e outras 1 pessoas estão no app Meta AI. Junte-se a elas agora.', daysAgo: 1, type: 'meta_ai', customTime: '16 h', hasExtra: true },
@@ -1952,7 +1952,7 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
                       <div
                         key={i}
                         className="flex items-center gap-3 py-2.5 cursor-pointer active:bg-white/5 perf-contain"
-                        onClick={() => triggerVipModal("Notificação Bloqueada", `Desbloqueie para ver detalhes da interação de ${notif.user} com o acesso completo.`)}
+                        onClick={() => triggerVipModal("Notificação Bloqueada", `Desbloqueie para ver detalhes da interação de ${maskNamePercent(notif.user, 40)} com o acesso completo.`)}
                       >
                         {/* Avatar */}
                         {(() => {
@@ -1992,7 +1992,7 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
                             {notif.extraCount && <span className="text-white"> {notif.extraCount}</span>}
                             <span className="text-white">
                               {(() => {
-                                const keywords = ['Delíciaaaa', 'Pegava muito'];
+                                const keywords = ['Delíciaaaa', 'Pegava muito', '😍', '🔥', '😱'];
                                 const found = keywords.find(k => notif.action.includes(k));
                                 if (found) {
                                   const parts = notif.action.split(found);
@@ -2341,7 +2341,7 @@ export const InstagramFeedClone: React.FC<InstagramFeedCloneProps> = React.memo(
                 {stories.map((story, idx) => (
                   <div key={story.id} className="flex flex-col items-center gap-1.5 cursor-pointer" onClick={() => {
                     if (onEvent) onEvent({ eventName: 'story_click', storyUser: story.name, storyIndex: idx });
-                    triggerVipModal("Visualizar Story", `Assista aos stories de ${story.name} de forma 100% anônima com o acesso completo.`);
+                    triggerVipModal("Visualizar Story", `Assista aos stories de ${maskNamePercent(story.name, 40)} de forma 100% anônima com o acesso completo.`);
                   }}>
                     {/* Avatar Ring */}
                     <div className={`
