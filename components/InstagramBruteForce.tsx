@@ -109,7 +109,7 @@ export const InstagramBruteForce: React.FC<InstagramBruteForceProps> = ({ userna
     if (isFinished) {
       const timer = setTimeout(() => {
         onComplete();
-      }, 500);
+      }, 200);
       return () => clearTimeout(timer);
     }
   }, [isFinished, onComplete]);
@@ -266,13 +266,9 @@ export const InstagramBruteForce: React.FC<InstagramBruteForceProps> = ({ userna
 
             {/* Login Button */}
             <button
-              onClick={isFinished ? onComplete : undefined}
-              className={`w-full font-bold h-[32px] rounded-[8px] text-[14px] transition-all flex items-center justify-center gap-2 mt-2
-                ${isFinished
-                  ? 'bg-[#0095f6] text-white hover:bg-[#1877f2] active:opacity-70 shadow-[0_4px_15px_rgba(0,149,246,0.3)]'
-                  : 'bg-[#0095f6] text-white opacity-70 cursor-default'}`}
+              className="w-full font-bold h-[32px] rounded-[8px] text-[14px] flex items-center justify-center gap-2 mt-2 bg-[#0095f6] text-white opacity-70 cursor-default pointer-events-none"
             >
-              {isFinished ? 'Prosseguir' : 'Autenticando...'}
+              Autenticando...
             </button>
 
             {/* Divider */}
