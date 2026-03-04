@@ -993,7 +993,7 @@ export const Cta: React.FC<CtaProps> = ({ username, profilePic, stats, price, on
                                 { q: 'A pessoa vai saber que eu stalkeei o perfil dela?', a: 'Não. O monitoramento é 100% invisível. O alvo nunca recebe notificações e você não precisa fazer login com sua conta.' },
                                 { q: 'Funciona em perfis privados?', a: 'Sim! Nossa tecnologia consegue acessar metadados de contas privadas sem a necessidade de seguir o perfil.' },
                                 { q: 'Preciso instalar alguma coisa?', a: 'Não. O sistema funciona 100% em nuvem. Você acessa tudo pelo seu navegador de forma segura e rápida.' },
-                                { q: 'Como funciona a garantia?', a: 'Oferecemos 30 dias de garantia incondicional. Se não ficar satisfeito, devolvemos 100% do seu dinheiro imediatamente.' },
+                                { q: 'Como recebo o acesso?', a: 'O acesso é enviado instantaneamente para o seu e-mail logo após a confirmação do pagamento. Você receberá um link exclusivo para acessar a ferramenta e começar a stalkear o perfil desejado imediatamente.' },
                                 { q: 'Tem reembolso?', a: 'Com certeza! Se por qualquer motivo você não ficar satisfeito com a ferramenta, basta solicitar o reembolso dentro do prazo de garantia e devolveremos 100% do seu investimento sem perguntas.' },
                                 { q: 'Quanto tempo tenho acesso?', a: 'O acesso é vitalício! Uma vez adquirido, você pode usar a ferramenta para sempre, sem mensalidades ou renovações.' }
                             ].map((item, i) => (
