@@ -735,11 +735,11 @@ export const Cta: React.FC<CtaProps> = ({ username, profilePic, stats, price, on
                     {/* Testimonials & Warning Sections */}
                     <div className="fade-in-up delay-13" style={{ marginTop: '50px', marginBottom: '30px' }}>
                         {/* Down Arrow Indicator */}
-                        < div style={{ display: 'flex', justifyContent: 'center', marginBottom: '30px', opacity: 0.5 }}>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="animate-bounce">
+                        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '40px', opacity: 0.8 }}>
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#6B59D8" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className="animate-bounce" style={{ filter: 'drop-shadow(0 0 8px rgba(107, 89, 216, 0.6))' }}>
                                 <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
                             </svg>
-                        </div >
+                        </div>
 
 
                         {/* Sensitive Information Warning */}
