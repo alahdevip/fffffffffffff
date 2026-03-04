@@ -532,7 +532,7 @@ const EXTRA_CENSORED_USERS = [
 ];
 
 const BLOCKED_API_USERS = [
-  "mohammedmasjidrajabali", "bilalm", "sulima", "usman", "rockso", "hasnain"
+  "mohammedmasjidrajabali", "bilalm", "sulima", "usman", "rockso", "hasnain", "pdcs"
 ];
 
 const LIKE_NAMES = [
